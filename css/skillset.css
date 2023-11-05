@@ -1,0 +1,23 @@
+/*
+========================================================================
+    Skill Set
+========================================================================
+*/
+.skillSet_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* center the image horizontally */
+    align-items: center;      /* center the image vertically */
+}
+
+.centered-image {
+    max-width: 100%;   /* ensure the image does not exceed the container's width */
+    height: auto;      /* maintain the image's aspect ratio */
+}
+
+#skill-intro{
+	text-align: center;  
+}
+#title-skill{
+	background-image: url('../images/TitleBanner-skill.png');
+}

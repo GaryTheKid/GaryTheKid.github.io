@@ -1,0 +1,41 @@
+/*
+========================================================================
+    Social
+========================================================================
+*/
+.contact-header {
+    color: grey;
+    font-size: 24px; /* Adjust as needed */
+    margin-bottom: 10px; /* Space between this text and the subtext */
+}
+
+.contact-subtext {
+    color: grey;
+    font-size: 16px; /* Adjust as needed */
+    margin-bottom: 20px; /* Space between this text and the buttons */
+}
+.social-button {
+    display: inline-block;
+    margin: 0 15px; /* Increased space between buttons */
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 18px; /* Increased font size */
+	box-shadow: 3px 3px 5px rgba(1,1,1,0.8);
+}
+.email-button {
+    background-color: #D44638; /* Example color for email */
+}
+
+.linkedin-button {
+    background-color: #0077B5; /* LinkedIn's color */
+}
+
+.github-button {
+    background-color: #333; /* GitHub's color */
+}
+
+.social-button:hover {
+    opacity: 0.8; /* Slight fade on hover */
+}

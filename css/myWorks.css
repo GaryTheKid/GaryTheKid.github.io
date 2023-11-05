@@ -1,0 +1,261 @@
+/*
+========================================================================
+    Work Header
+========================================================================
+*/
+#title-work{
+	background-image: url('../images/TitleBanner-work.png');
+}
+#work-intro{
+	font-size: 20px;
+	text-align: center;
+}
+/* Normal State */
+.demo {
+	display:block;
+	width:100%;
+    padding-top: 2%;
+    background: #FFF9DF;
+    overflow: hidden;
+}
+
+/*
+========================================================================
+    Work Nav Tab Bar
+========================================================================
+*/
+.button-group {
+    display: flex;
+    width: 100%;
+    font-size: 30px;
+	text-align: center;
+}
+
+.button-group button {
+    flex: 1; /* This ensures each button takes up an equal amount of space */
+    width: 20%; /* Each button takes up 20% of the width */
+    box-sizing: border-box; /* This ensures padding and border are included in the width */
+    padding: 40px;
+    border: none;
+    cursor: pointer;
+	background-image: url("../images/WorkNavTap_Normal.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 99% 99%;
+	color: #00086A;
+}
+
+/* Hover effect for buttons that are NOT selected */
+.button-group button:not(.selected):hover {
+    background-image: url("../images/WorkNavTap_Hover.png");
+	color: white;
+}
+	
+.button-group button.selected {
+    background-image: url("../images/WorkNavTap_Selected.png");
+	color: black;
+    /* Add any other styles you want for the selected state */
+}
+
+/*
+========================================================================
+    Work Grid Content
+========================================================================
+*/
+
+
+/* 
+.grid-container {
+    display: grid;
+    gap: 0;
+    background-color: #f4f4f4;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+This grid-container is stalled in the html file since it contains bootstrap thing.
+*/
+.grid-item {
+    width: 100%;        /* Ensure the grid item takes up the full width of its container */
+    height: 100%;       /* Ensure the grid item takes up the full height of its container */
+    background-color: #e0e0e0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; /* This will cover the entire viewport of the .grid-item */
+    background-repeat: no-repeat; /* This will prevent the image from repeating */
+    background-position: center; /* This will center the image */
+    position: relative;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s; /* 0.5s is the duration of the transition, adjust as needed */
+    display: none; /* Initially set to none */
+    overflow: hidden; 
+}
+
+.grid-item#experience_CGUILab { background-image: url("../images/Works_Thumbnail_Experience_CGUI-Lab.png"); }
+.grid-item#experience_GRL { background-image: url("../images/Works_Thumbnail_Experience_GRL.png"); }
+.grid-item#experience_Unity { background-image: url("../images/Works_Thumbnail_Experience_Unity.png"); }
+.grid-item#experience_spectrumForge { background-image: url("../images/Works_Thumbnail_Experience_spectrumForge.png"); }
+.grid-item#experience_esportClub { background-image: url("../images/Works_Thumbnail_Experience_esportClub.png"); }
+.grid-item#experience_gradResearcher { background-image: url("../images/Works_Thumbnail_Experience_gradResearcher.png"); }
+.grid-item#publication_FMRG_multiRobot_acm_sui { background-image: url("../images/Works_Thumbnail_Publication_FMRG-multirobot-acm-sui.png"); }
+.grid-item#award_GoChess3Dan { background-image: url("../images/Works_Thumbnail_Award_GoChess3Dan.png"); }
+.grid-item#award_OWT500 { background-image: url("../images/Works_Thumbnail_Award_OWT500.png"); }
+.grid-item#award_SCgm30 { background-image: url("../images/Works_Thumbnail_Award_SCgm30.png"); }
+.grid-item#award_tespa { background-image: url("../images/Works_Thumbnail_Award_tespa.png"); }
+.grid-item#award_physics { background-image: url("../images/Works_Thumbnail_Award_physics.jpg"); }
+
+.grid-item-cover {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 45%;
+	justify-content: center;
+}
+
+.grid-item-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Remove the default underline */
+    color: inherit; /* Ensure text color remains unchanged */
+}
+
+.grid-item:hover .grid-item-cover {
+    background-color: rgba(0, 0, 0, 0); /* Add a semi-transparent black overlay */
+}
+
+.grid-item.visible {	
+    opacity: 1; /* Fully visible */
+    display: block; /* or "grid" or whatever display type you want for individual items */
+}
+
+.grid-item-content {
+    position: absolute;
+    bottom: 10px; /* Adjust this value to position the content from the bottom */
+    left: 10px; /* Adjust this value to position the content from the left */
+    right: 10px; /* Ensures the content doesn't overflow the grid item */
+    color: #fff; /* Assuming the grid item has a dark background, adjust as needed */
+}
+
+.grid-item-status-ongoing {
+    position: absolute;
+    top: 10%;
+	left: 3.5%;
+	width: 25%; /* Adjust based on the size of your icons */
+    height: 10%; /* Adjust based on the size of your icons */
+    border: 4px solid #1AFF00;
+	border-radius: 5px; /* Optional: to give rounded corners */
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #1AFF00;
+	text-align: center;
+	text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.8);
+	font-size: 30px;
+}
+	
+.grid-item-attribute {
+    position: absolute;
+    top: 2%;
+	left: -2%;
+	width: 100%; /* Adjust based on the size of your icons */
+    height: 20%; /* Adjust based on the size of your icons */
+    font-size: 30px;
+    margin: 0;
+	color: white;
+	text-align: start;
+	text-indent: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.grid-item-attribute-icon {
+    position: absolute;
+	top: 1.6%;
+	right: 1%;
+    width: 8%; /* Adjust based on the size of your icons */
+    height: 8%; /* Adjust based on the size of your icons */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1; /* Ensure it appears above other content */
+}
+	
+.grid-item-attribute-icon-2rd {
+    position: absolute;
+	top: 10.6%;
+	right: 1%;
+    width: 8%; /* Adjust based on the size of your icons */
+    height: 8%; /* Adjust based on the size of your icons */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1; /* Ensure it appears above other content */
+}
+	
+.grid-item-attribute-icon-experience {background-image: url("../images/Icons/Experience.png");}
+.grid-item-attribute-icon-award {background-image: url("../images/Icons/Award.png")}	
+.grid-item-attribute-icon-project {background-image: url("../images/Icons/Project.png")}
+.grid-item-attribute-icon-thought {background-image: url("../images/Icons/Thought.png")}
+.grid-item-attribute-icon-publication {background-image: url("../images/Icons/Publication.png")}
+
+.grid-item-title {
+	position: absolute;
+	text-align: center;
+	font-weight: 200;
+	width: 100%;
+	bottom: 130px;
+    font-size: 34px;
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Horizontal offset, Vertical offset, Blur radius, Color */
+}
+	
+.grid-item-description {
+    font-size: 24px;
+    margin-top: 5px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Same shadow as the title */
+}
+
+/* Normal state styles */
+.grid-item-title {
+    color: white;  /* Replace with your default color */
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover state styles */
+.grid-item:hover .grid-item-content .grid-item-title{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    color: #0084FF;  /* Replace with your desired hover color */
+}
+	
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the video covers the entire container */
+    z-index: 0;       /* This ensures the video stays behind your content */
+}
+
+.warningText{
+	display: block;
+	font-size: 30px; 
+	color: #DC0003;
+}
+
+.loadBar {
+    left: 42.5%;
+    width: 15%;
+    height: 60px;
+    border: 5px solid #5c5c5c;
+    position: relative;
+    border-radius: 0; /* Ensure sharp corners */
+}
+
+.loadBar .progress {
+    height: 100%;
+    width: 0%; /* Initially, no progress */
+    background-color: #5c5c5c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0; /* Ensure sharp corners */
+}

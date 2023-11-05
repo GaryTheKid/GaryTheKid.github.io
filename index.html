@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/headerNavbar.css">
+<link rel="stylesheet" type="text/css" href="css/aboutme.css">
+<link rel="stylesheet" type="text/css" href="css/interest.css">
+<link rel="stylesheet" type="text/css" href="css/skillset.css">
+<link rel="stylesheet" type="text/css" href="css/myWorks.css">
+<link rel="stylesheet" type="text/css" href="css/footer.css">
+<style type="text/css">
+/*
+========================================================================
+    GLOBAL SETTINGS
+========================================================================
+*/
+@font-face{
+font-family: "LCALLIG";
+src: url('font/Wendy-Neue.ttf');
+}
+@font-face{
+font-family: "SCRIPTBL";
+src: url('font/vp-pixel.simplified-demo.otf');
+}
+*{ margin:0; padding:0;}
+a{ text-decoration:none; color: #000277; }
+h1.website{ font-family: "LCALLIG"; font-size:54px;}
+body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
+@keyframes scrollDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header{ 
+	background: #00202F; 
+	color:#fff; 
+	display:block; 
+	position: fixed;
+    top: 0;
+    left: 0;
+	width:100%; 
+	height:100px; 
+	margin-left:0; 
+	margin-right:0;
+    z-index: 1000; 
+}
+.header h1{display:block; float:left; height:100px; line-height:100px; margin:0; margin-left:20px;}
+.header a{ display:block; float:right; color:#fff; font-size:24px; padding:0px 20px; height:100px; line-height:100px; text-transform:uppercase;}
+.header a:hover{ text-decoration:underline;}
+.container{ margin:0px auto; width:100%; padding:0px; overflow:hidden;}
+.row {border-bottom: 6px dashed #00202F;margin:0px auto; width:100%; padding:0px;}
+.row.header{animation: scrollDown 1s ease-in-out forwards;}
+.one{ background:#FFE; display:block; width:100%; padding:2% 2%; margin-top:100px; overflow:hidden;}
+.two{ background:#FFF9DF; display:block; width:100%; padding:2% 2%; overflow:hidden;}
+.three{ background:#FFE; display:block; width:100%; padding:2% 2%; overflow:hidden;}
+.four{ background:#FFF9DF; display:block; width:100%; padding:2% 0; overflow:hidden;}
+.footer{ background:#00202F; display:block; width:100%; margin-top: 30px; padding:2% 0; overflow:hidden;text-align: center;}
+.title {
+    text-transform: uppercase;
+    margin: 0;
+    background-size: contain;  /* Cover the entire width of the element */
+    background-repeat: no-repeat;  /* Ensure the image doesn't repeat */
+    background-position: center;  /* Center the background image */
+    padding-top: 30px;    /* Reduce the top padding */
+    padding-bottom: 90px; /* Increase the bottom padding */
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: normal; /* Adjust if needed to center text vertically */
+    color: white;  /* Or whatever color your text should be */
+    text-align: center; /* Aligns the text to the center */
+	display:block; 
+	float:left; 
+	width:100%; 
+	font-size:36px; 
+	font-family:"LCALLIG"; 
+	text-align:center; 
+	text-shadow: 2px 2px 2px gray;
+}
+.t_title {
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px gray;
+}
+.f_title{ display:block; float:left; width:100%; text-align:center; font-size:24px; margin-bottom:8px; text-transform:uppercase;}
+.d_title{ display:block; float:left; width:100%; font-size:36px; text-align:center; margin-top:100px; margin-bottom:10px; text-transform:uppercase; }
+.contain_text{ display:block; float:left; width:100%; text-align:left; text-indent:2em; line-height:28px; font-size:22px; margin-bottom:15px;}
+.grid-container {
+    display: grid;
+    gap: 0;
+    background-color: #f4f4f4;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+#about {position: absolute;margin-top: -10vh;visibility: hidden;pointer-events: none; /* This makes sure it won't interfere with clicking */}
+#interest {position: absolute;margin-top: -10vh;visibility: hidden;pointer-events: none; /* This makes sure it won't interfere with clicking */}
+#skill {position: absolute;margin-top: -10vh;visibility: hidden;pointer-events: none; /* This makes sure it won't interfere with clicking */}
+#myWorks {position: absolute;margin-top: -10vh;visibility: hidden;pointer-events: none; /* This makes sure it won't interfere with clicking */}
+	
+</style>
+<title>chongyang.io</title>
+</head>
+<body>
+<div class="container">
+	<div class="row header">
+		<div class="col-md-1 text-left">
+			<h1 class="website">CHONGYANG.IO</h1>
+		</div>
+		<div class="col-md-11 text-right"> 
+			<a href="chongyang.io.html#myWorks" class="nav-link">
+				<span class="icon" id="icon1"></span> 
+				<span class="link-text">My Works.</span>
+			</a> 
+			<a href="chongyang.io.html#skill" class="nav-link">
+				<span class="icon" id="icon2"></span> 
+				<span class="link-text">Skill Set</span>
+			</a> 
+			<a href="chongyang.io.html#interest" class="nav-link">
+				<span class="icon" id="icon3"></span> 
+				<span class="link-text">Interest</span>
+			</a> 
+			<a href="chongyang.io.html#about" class="nav-link">
+				<span class="icon" id="icon4"></span> 
+				<span class="link-text">About Me</span>
+			</a> 
+		</div>
+	</div>
+    <div class="row one">
+		<div id="about"></div>
+    	<div class="col-md-4 pro col-lg-3">
+			<img src="images/Icon_VR_1000.png" alt="My Photo"/>
+			<div class="CV"><b><a href="Chongyang(Gary)_CV.docx">CV / RESUME</a></b></div>
+		</div>
+        <div class="col-md-8 col-lg-9">
+       	  	<div class="t_title">My Story</div>
+          	<div class="contain_text">My name is <b>Chongyang Wang</b>, usually folks call me <b>Gary</b>! I'm a <b>HCI Researcher</b> (Novel Interfaces, cognition technologies, interaction/collaboration...for more details, check the <b><a href="chongyang.io.html#interest">"Interest"</a></b> Section down below), <b>Instructional Designer</b>, and a <b>Game Developer and Designer.</b></div>
+		  	<div class="contain_text">Prior to my research journey, I dreamt of emulating wizards in the entertainment world, like Miyamoto. I just LOVE every keystroke playing with game engines or other tools while trying to iterate fun ideas to reality since high school. Later, during my Columbia experiences, with the opportunities working along with prof.Joey Lee and Steven Feiner, there I found my TRUE INTEREST. Ford said, if you ask people (before automobile was invented) what they want, they always reply a faster horse wagon. Similarly, a younger me might have just wished for a cooler video game. However, in fact, what I really want may actually beyond a game bringing people just laughter, but a creative, interactive, thoughtful, or problem-solving experience, in short, some novel and fun Human-Computer Interaction experiences or interfaces typically for promoting our life. </div>
+		  	<div class="contain_text">Gladly, my game dev <b><a href="chongyang.io.html#skill">skills and tools mastery</a></b> have served as a sturdy bridge during this transition. Yet, like someone said, "We will never be ready." The art of engineering and the quest for research are not usually the same path, but this may just be the allure of pursuing research that intrigues me always - we will never know what's the future looks like till we invent it. This spirit of exploration was further ignited during my Future Manufacturing research experience in the CGUI Lab (funded by NSF, produced publications such as one already accepted by <b><a href="https://dl.acm.org/doi/10.1145/3607822.3618004">ACM SUI</a></b>). What I also learned is, having creativity, critical mind, and eyes of discovery alone are not sufficient for succeeding in research, but relentless perseverance matters too (actually, let's not use the word "Success", it's for engineers and business people, doing research is about discovery, and discovering something new can't really be judged as a success or failure whatsoever, especially considered within the current timespace. After all, the joy is in the discovery, in the journey, not just the destination).</div>
+          	<div class="t_title">Education</div>
+          	<div class="contain_text"><strong>M.A. in Instructional Technology</strong>, with program track - Design and Development of Digital Games, <strong>Columbia University</strong></div>
+		  	<div class="contain_text"><strong>Cert. in Game Design</strong>, <strong>University of Wisconsin - Madison</strong></div>
+		  	<div class="contain_text"><strong>B.S. in Computer Science</strong>, <strong>University of Wisconsin - Madison</strong></div>
+		  	<div class="t_title">Active Roles</div>
+		  	<div class="contain_text"><strong>Research Assistant</strong> at <strong>Columbia CGUI Lab</strong> (Computer Graphics and User Interface), <em>Supervisor: Steven K. Feiner</em></div>
+          	<div class="contain_text"><strong>Instructional Designer</strong> at <strong>Unity Technologies</strong>.</div>
+      	</div>
+  	</div>
+    <div class="row two">
+		<div id="interest"></div>
+    	<div class="col-md-12">
+        	<div class="title" id="title-goal">My Interests/goals</div>
+			<div class="t_title">My Current goal</div>
+        	<div class="contain_text"> 
+				How to utilize immersive/cognitive technologies such as AR/VR, gaze, and cueing techniques to build noval interfaces that facilitate Visualization, Interaction, and Human-Robot/Human-Human Collaboration. 
+			</div>
+			<div class="t_title">My Long-term vision</div>
+			<div class="contain_text"> 
+		    Research and design Human-Computer/Machine/Robot (whatever you name it) Interaction techniques aligning with computer science and human cognition that create new possibilities for high-fidelity and efficient collaborative systems, transformative learning, or next-generation entertainment. To promote our life quality, work/learning efficiency, and social good in general.</div>
+			<div class="t_title">My General interest / values / point of views</div>
+			<div class="contain_text"> - Making technologies as much as accessible to everyone, enhancing human intuitiveness to ensure even those with minimal professional experience can easily navigate, use, and enjoy with motivation.</div>
+			<div class="contain_text"> - Creating game-liked experiences to solve problems, contribute social good, or simply entertain.</div>
+			<div class="t_title">In a short future</div>
+ 			<div class="contain_text"> 
+				Considering all my experiences, interests, and goals, I made up my mind to <strong style="font-size: 26px; color: red">pursue a Ph.D.</strong> in <strong style="font-size: 26px; color: red">CS/HCI/HCC field</strong>, where I will continue my journey of research.  
+			</div>
+        </div>
+    </div>
+    <div class="row three">
+		<div id="skill"></div>
+    	<div class="col-md-12">
+        	<div class="title" id="title-skill">skill set</div>
+			<div class="t_title" id="skill-intro">An Interdisciplinary Skill set and tool mastery:</div>
+			<div class="skillSet_container">
+        		<img src="images/SkillSet.png" class="centered-image">
+    		</div>
+        </div>
+    </div>
+	<div class="row four">
+		<div id="myWorks"></div>
+		<div class="title" id="title-work">Discover My Work from ? Aspects</div>
+		<div class="contain_text" id="work-intro">
+		    I've arranged things this way to show the evolution my work and interests/focus. <br>
+			The sequence <b>(left &gt; right; top &gt; bottom, not strickly though)</b> represents the proximity of each item to my current focus and interests. Dive into my:<br>
+		    <b>EXPERIENCE</b>: roles<br>
+		    <b>PUBLICATION</b>: recognized or published papers and products<br>
+		    <b>PROJECT</b>: formal, systematic series of tasks with professional guidance<br>
+		    <b>THOUGHT</b>: thoughts/prototypes with the potential (don't have time or not polished yet) to evolve into projects, or simply fun ideas<br>
+		    <b>AWARD</b>: some recognitions.<br><br><br>
+			<div class="warningText">
+			  <p>To challenge my budget, I built a super cheap server (plz also ignore the insecure warning) with incredibly low bandwidth, which usually takes <b>1-2mins</b> to fully load all thumbnail videos.</p>
+			  <br><br>
+			  <p style="color: #5c5c5c;">Loading...(feel free to view and click without full thumbnails tho)</p>
+			</div>
+		  	<div class="loadBar">
+    			<div class="progress"></div>
+			</div>
+	  </div>
+		<!-- Nav tabs -->
+        <div class="button-group">
+        	<button id="works-button-all" class="selected">All</button>
+        	<button id="works-button-research">Researcher</button>
+        	<button id="works-button-developer">Developer</button>
+        	<button id="works-button-designer">Designer</button>
+        	<button id="works-button-game">Game Guy</button>
+    	</div>
+        <!-- Tab content grid -->
+        <div class="grid-container">
+        	<a href="https://dl.acm.org/doi/10.1145/3607822.3618004" class="grid-item-link">
+    			<div class="grid-item works-item-research visible" id="publication_FMRG_multiRobot_acm_sui">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PUBLICATION</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-publication"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">FMRG-MultiRobot</h3>
+    			        <p class="grid-item-description">accepted publication by ACM SUI 2023</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-FMRG-MultiRobot.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer works-item-developer visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_FMRG-multiRobot-poster.jpg" data-src="images/Works_Thumbnail_Project_FMRG-multiRobot.mp4">
+    					Your browser does not support the video tag.
+				  	</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-for publication</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+					<div class="grid-item-status-ongoing">Ongoing</div>
+   			      	<div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">FMRG-MultiRobot</h3>
+    			        <p class="grid-item-description">NSF-funded project; future manufacturing human-robot remote collaboration; multi-task management; 3D GUI; VR/AR; pre-cueing</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-FMRG-GazeCollab.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer works-item-developer visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_FMRG-gazeCollab-poster.jpg" data-src="images/Works_Thumbnail_Project_FMRG-gazeCollab.mp4">
+    					Your browser does not support the video tag.
+				  </video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-for publication</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+					<div class="grid-item-status-ongoing">Ongoing</div>
+					<div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">FMRG-GazeCollab</h3>
+    			        <p class="grid-item-description">NSF-funded project; future manufacturing human-human remote collaboration; eyetracking; cognition visualization; hand-gaze coordination; 3D GUI; VR/AR;</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="experience-CGUI.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer works-item-developer visible" id="experience_CGUILab">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">EXPERIENCE</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
+					<div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Research Assisntant</h3>
+    			        <p class="grid-item-description">at CGUI Lab, 05/2022 - Now</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-UnityCourse.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_UnityGPTCourse_poster.jpg" data-src="images/Works_Thumbnail_Project_UnityGPTCourse.mp4">
+    					Your browser does not support the video tag.
+				  </video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-for publication</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+					<div class="grid-item-status-ongoing">Ongoing</div>
+					<div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Unity Dev "Cheat Mode"</h3>
+    			        <p class="grid-item-description">an Unity officially verified case-based tutorial for GPT facilitated Unity game full-stack production for the Unity Learn platform CN</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="experience-Unity.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer works-item-developer works-item-game visible" id="experience_Unity">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">EXPERIENCE</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
+					<div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Instructional Designer</h3>
+    			        <p class="grid-item-description">at Unity Technologies., 05/2023 - Now</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-VRSandbox.html" class="grid-item-link">
+   			<div class="grid-item works-item-research works-item-designer works-item-developer visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_physicsVRSandbox-poster.jpg" data-src="images/Works_Thumbnail_Project_physicsVRSandbox.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-awarded</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-award"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Physics Wonderland</h3>
+    			        <p class="grid-item-description">a VR physics learning sandbox edu game, inviting learners to build, test, and play with their hand-crafted machinary with immersion</p>
+    			    </div>
+   			</div>
+			</a>
+			<a href="thought-VRLocomotion.html" class="grid-item-link">
+   			<div class="grid-item works-item-research works-item-designer works-item-developer visible" >
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Thought_VRLocomotion_poster.jpg" data-src="images/Works_Thumbnail_Thought_VRLocomotion.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">THOUGHT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-thought"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">"Walk" into Metaverse</h3>
+    			        <p class="grid-item-description">prototyping alternative ideas for novel VR locomotion systems, 11/2022</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-ARMath.html" class="grid-item-link">
+   				<div class="grid-item works-item-designer works-item-developer visible" >
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_ARMathFunction_Poster.jpg" data-src="images/Works_Thumbnail_Project_ARMathFunction.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Mesh Math</h3>
+    			        <p class="grid-item-description">visualize complex 2-variable functions, procedural function 3D graph generation in AR</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-FPSGaze.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_FPSGaze-poster.jpg" data-src="images/Works_Thumbnail_Project_FPSGaze.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">FPS Aim strategy analysis</h3>
+    			        <p class="grid-item-description">comprehend player behavior and FPS game crosshair pre-placement strategies using gaze analysis</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-VRMuseum.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_VRMuseum_poster.jpg" data-src="images/Works_Thumbnail_Project_VRMuseum.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">"Time Traveler" Museum</h3>
+    			        <p class="grid-item-description">an immersive VR museum experience enabling users to travel back to the time when the displayed artifact was born and developed</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-AIFallacy.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_AIFallacy_poster.jpg" data-src="images/Works_Thumbnail_Project_AIFallacy.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Fallacy Finder</h3>
+    			        <p class="grid-item-description">an AI-powered web plugin-liked tool promoting the public's awareness of media's frequently-used, contentious propagation strategies</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="thought-ARImpairment.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_ARDeepWater_poster.jpg" data-src="images/Works_Thumbnail_Project_ARDeepWater.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">THOUGHT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-thought"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Conquer Physical Impairment</h3>
+    			        <p class="grid-item-description">designing prototypes for AR/Neural Interfaces for harsh environment (like deep watch or space) task assistance and collaboration</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="experience-gradResearcher.html" class="grid-item-link">
+    			<div class="grid-item works-item-research visible" id="experience_gradResearcher">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">EXPERIENCE</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Grad Student Researcher</h3>
+    			        <p class="grid-item-description">at Columbia, 04/2022 - 05/2022</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-VRMisconception.html" class="grid-item-link">
+   			<div class="grid-item works-item-design works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_VRCombatClimateChange_poster.jpg" data-src="images/Works_Thumbnail_Project_VRCombatClimateChange.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Transformative Game for Misconception</h3>
+    			        <p class="grid-item-description">a VR role-play game design project that aims to combat public misconceptions on climate change</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-workshop-GPTMultiplayer.html" class="grid-item-link">
+   			<div class="grid-item works-item-research works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_GRLWorkshop-GPTmultiplayer_poster.jpg" data-src="images/Works_Thumbnail_Project_GRLWorkshop-GPTmultiplayer.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Workshop: GPT Multiplayer Dev</h3>
+    			        <p class="grid-item-description">holding a workshop teaching online game basics and discussing the potential of GPT and prompts in multiplayer game development</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-flooded.html" class="grid-item-link">
+   			<div class="grid-item works-item-research works-item-designer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_flooded_poster.jpg" data-src="images/Works_Thumbnail_Project_flooded.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-awarded</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-award"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">"Flooded"</h3>
+    			        <p class="grid-item-description">a serious board game that encourages international collaboration on solving global issues like climate change</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-gameWeb.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible" id="project_gamifiedProfileWeb">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_gamifiedProfileWeb_poster.jpg" data-src="images/Works_Thumbnail_Project_gamifiedProfileWeb.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Gamified Web Profile</h3>
+    			        <p class="grid-item-description">my legacy homepage, a gamified personal profile exploration experience</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-workshop-learnUnity.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_learnUnityInUnity_poster.jpg" data-src="images/Works_Thumbnail_Project_learnUnityInUnity.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Workshop: Learn Unity in Unity</h3>
+    			        <p class="grid-item-description">holding a workshop teaching game development and Unity Engine basics, research novel learning material substitutes for powerpoint</p>
+    			    </div>
+    			</div>
+			</a>
+	  	  	<a href="experience-GRL.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-designer works-item-developer works-item-game visible" id="experience_GRL">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">EXPERIENCE</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Lab Assisntant</h3>
+    			        <p class="grid-item-description">at TC Game Research Lab, 09/2021 - 05/2023</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-topdownPixel.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_topdownPixelGame_poster.jpg" data-src="images/Works_Thumbnail_Project_topdownPixelGame.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+					<div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Topdown Pixel BR Game</h3>
+    			        <p class="grid-item-description">a topdown pixel multiplayer battle-royale game, leading a community to iteratively build a commercial game</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-hdrpTank.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_HDRPTank_poster.jpg" data-src="images/Works_Thumbnail_Project_HDRPTank.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">HDRP Tank Simulator</h3>
+    			        <p class="grid-item-description">a demo for practicing Unity High-Definition Render Pipeline, post-processing, etc.</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-oneManArmy.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_oneManArmy_poster.jpg" data-src="images/Works_Thumbnail_Project_oneManArmy.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">"One Man Army"</h3>
+    			        <p class="grid-item-description">a topdown multiplayer combat game crafted with Unity URP, Blender, Garageband, self full-stack development</p>
+    			    </div>
+    			</div>
+			</a>
+		  	<a href="experience-SpectrumForge.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible" id="experience_spectrumForge">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">EXPERIENCE</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
+					<div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Founder, Director</h3>
+    			        <p class="grid-item-description">at Spectrum Forge GameDev Community, 10/2019 - Now</p>
+    			    </div>
+    			</div>
+			</a>
+			
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_missionGame_poster.jpg" data-src="images/Works_Thumbnail_Project_missionGame.mp4">
+    					Your browser does not support the video tag.
+					</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">"Mission Complete"</h3>
+    			        <p class="grid-item-description">a first-person sandbox story-driven serious game</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_gameHaus_poster.jpg" data-src="images/Works_Thumbnail_Project_gameHaus.mp4">
+    					Your browser does not support the video tag.
+				  </video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-awarded</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-award"></div>
+   			      <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Game Haus</h3>
+    			        <p class="grid-item-description">an alternative product for discord, a client-centered communication tool for esport fans</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-game visible" id="award_tespa">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">AWARD</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-award"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Tespa ESport League</h3>
+    			        <p class="grid-item-description">Top 50 Overwatch competitor Team, 2019</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-game visible" id="experience_esportClub">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">EXPERIENCE</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Overwatch Team 1, Main DPS</h3>
+    			        <p class="grid-item-description">at Madison ESport Club, 09/2019 - 01/2020</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-game visible" id="award_OWT500">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">AWARD</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-award"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Overwatch Top 200</h3>
+    			        <p class="grid-item-description">NA server, 2019</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-game visible" id="award_SCgm30">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">AWARD</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-award"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">StarCraft2 Grandmaster Top 30</h3>
+    			        <p class="grid-item-description">CN server, 2017</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-developer works-item-game visible" id="award_physics">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">AWARD</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-award"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">National Physics Olympiad</h3>
+    			        <p class="grid-item-description">3rd Prize, 2015</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="page.html" class="grid-item-link">
+    			<div class="grid-item works-item-game visible" id="award_GoChess3Dan">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">AWARD</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-award"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Go Chess 3 Dan</h3>
+    			        <p class="grid-item-description">2014</p>
+    			    </div>
+    			</div>
+			</a>
+    	</div>
+    </div>
+	<div class="row footer">
+		<p class="contact-header">Contact Me:</p>
+    	<p class="contact-subtext">I quitted Facebook and Twitter in 2019, realizing they were more distracting than beneficial. I have multiple GitHub accounts, this one is for contact.</p>
+    	<a href="mailto:cwang643@gmail.com" class="social-button email-button">Email</a>
+    	<a href="https://www.linkedin.com/in/chongyang-wang-cwang643/" class="social-button linkedin-button">LinkedIn</a>
+    	<a href="https://github.com/GaryTheKid" class="social-button github-button">GitHub</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    // Variables
+    let buttons = document.querySelectorAll('.button-group button');
+    let gridItems = document.querySelectorAll('.grid-item');
+	let allGridItemLinks = document.querySelectorAll('.grid-item-link');
+ 
+    // Functions
+    function handleButtonSelection(button) {
+        // Remove 'selected' class from all buttons
+        buttons.forEach(function(innerButton) {
+            innerButton.classList.remove('selected');
+        });
+
+        // Add 'selected' class to the clicked button
+        button.classList.add('selected');
+    }
+
+    function autosizeGridItems() {
+        gridItems.forEach(function(item) {
+            var width = item.offsetWidth;
+            var height = width; // 1:1 ratio
+            item.style.height = height + 'px';
+        });
+    }
+	
+	function adjustFontSize() {
+    	gridItems.forEach(function(item) {
+    	    let width = item.offsetWidth;
+    	    
+    	    // Set font size based on the width of the item
+    	    let titleFontSize = width * 0.07; // 6% of the item's width, adjust as needed
+    	    let descriptionFontSize = width * 0.04; // 4% of the item's width, adjust as needed
+			let attributeFontSize = width * 0.052;
+			let statusFontSize = width * 0.049;
+			
+    	    // Apply the calculated font sizes
+    	    let title = item.querySelector('.grid-item-title');
+    	    let description = item.querySelector('.grid-item-description');
+			let attribute = item.querySelector('.grid-item-attribute');
+			let status = item.querySelector('.grid-item-status-ongoing');
+			
+    	    title.style.fontSize = titleFontSize + 'px';
+    	    description.style.fontSize = descriptionFontSize + 'px';
+			attribute.style.fontSize = attributeFontSize + 'px';
+			if (status) {
+    			status.style.fontSize = statusFontSize + 'px';
+			}
+    	});
+	}
+	
+    function handleGridItemVisibility(button) {
+        // Hide all grid items
+        gridItems.forEach(function(item) {
+            item.classList.remove('visible');
+            item.style.display = 'none';
+        });
+		
+		// Hide all grid links
+		allGridItemLinks.forEach(function(link) {
+			link.style.display = 'none';
+		});
+		
+        // If the "All" button is clicked, show all items
+        if (button.id === "works-button-all") {
+            gridItems.forEach(function(item) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 80);
+            });
+			allGridItemLinks.forEach(function(link) {
+        		link.style.display = 'block';
+        		setTimeout(() => {
+            		link.querySelector('.grid-item').classList.add('visible');
+        		}, 80);
+    		});
+        } else {
+            // Show only the items that correspond to the clicked button
+			let targetClass = ".works-item-" + button.id.split('-')[2];
+			let elements = document.querySelectorAll(targetClass);
+			elements.forEach(function(el) {
+				el.parentElement.style.display = 'block';
+				el.style.display = 'block';
+				setTimeout(() => {
+					el.classList.add('visible');
+				}, 80);
+			});
+        }
+    }
+
+    // Event Listeners
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+			// If the button is already selected, exit the function
+			if (button.classList.contains('selected')) {
+				return;
+			}
+			
+            handleButtonSelection(button);
+            handleGridItemVisibility(button);
+            autosizeGridItems(); // Refresh item size after visibility changes
+			adjustFontSize();
+        });
+    });
+
+    window.addEventListener('resize', function() {
+        autosizeGridItems(); // Ensure this is still called on resize
+		adjustFontSize();
+    });
+
+    // Initial setup
+    autosizeGridItems();
+	adjustFontSize();
+	document.getElementById('works-button-all').click();
+});
+
+// load videos after page loaded
+window.addEventListener('load', function() {
+    let videos = document.querySelectorAll('.background-video');
+    let totalVideos = videos.length;
+    let loadedVideos = 0;
+    let progressBar = document.querySelector('.loadBar .progress');
+    let warningText = document.querySelector('.warningText');
+	let loadBar = document.querySelector('.loadBar');
+	
+    videos.forEach(function(video) {
+        let source = document.createElement('source');
+        source.src = video.getAttribute('data-src');
+        source.type = 'video/mp4';
+        video.appendChild(source);
+
+        video.addEventListener('loadeddata', function() {
+            loadedVideos++;
+            let progressPercentage = (loadedVideos / totalVideos) * 100;
+            progressBar.style.width = progressPercentage + '%';
+
+            if (loadedVideos === totalVideos) {
+                warningText.style.display = 'none';
+				loadBar.style.display = 'none';
+            }
+        });
+
+        video.load();
+    });
+});
+
+</script>
+	
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>

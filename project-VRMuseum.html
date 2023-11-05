@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/headerNavbar.css">
+<link rel="stylesheet" type="text/css" href="css/aboutme.css">
+<link rel="stylesheet" type="text/css" href="css/footer.css">
+<style type="text/css">
+/*
+========================================================================
+    GLOBAL SETTINGS
+========================================================================
+*/
+@font-face{
+font-family: "LCALLIG";
+src: url('font/Wendy-Neue.ttf');
+}
+@font-face{
+font-family: "SCRIPTBL";
+src: url('font/vp-pixel.simplified-demo.otf');
+}
+*{ margin:0; padding:0;}
+a{ text-decoration:none; color: #000277; }
+h1.website{ font-family: "LCALLIG"; font-size:54px;}
+body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL"; }
+@keyframes scrollDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header{ 
+	background: #00202F; 
+	color:#fff; 
+	display:block; 
+	position: fixed;
+    top: 0;
+    left: 0;
+	width:100%; 
+	height:100px; 
+	margin-left:0; 
+	margin-right:0;
+    z-index: 1000; 
+}
+.header h1{display:block; float:left; height:100px; line-height:100px; margin:0; margin-left:20px;}
+.header a{ display:block; float:right; color:#fff; font-size:24px; padding:0px 20px; height:100px; line-height:100px; text-transform:uppercase; }
+.header a:hover{ text-decoration:underline;}
+.container{ margin:0px auto; width:100%; padding:0px; overflow:hidden;}
+.row {border-bottom: 6px dashed #00202F;margin:0px auto; width:100%; padding:0px; }
+.row.header{animation: scrollDown 1s ease-in-out forwards; box-shadow: 0px;}
+.one{ background:#FFF9DF; display:block; width:100%; padding:2% 2%; overflow:hidden; }
+.footer{ background:#00202F; display:block; width:100%; margin-top: 30px; padding:2% 0; overflow:hidden;text-align: center;}
+.title {
+    text-transform: uppercase;
+    margin: 0;
+    background-size: contain;  /* Cover the entire width of the element */
+    background-position: center;  /* Center the background image */
+    padding-top: 30px;    /* Reduce the top padding */
+    padding-bottom: 90px; /* Increase the bottom padding */
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: normal; /* Adjust if needed to center text vertically */
+    color: white;  /* Or whatever color your text should be */
+    text-align: center; /* Aligns the text to the center */
+	display:block; 
+	float:left; 
+	width:100%; 
+	font-size:36px; 
+	font-family:"LCALLIG"; 
+	text-align:center; 
+	text-shadow: 2px 2px 2px gray;
+}
+.t_title {
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px gray;
+	padding:0% 5% 0% 5%;
+}
+.contain_text{ display:block; width:100%; text-align: justify; line-height:28px; font-size:22px; margin-bottom:15px; padding:0% 5% 0% 5%;}
+	
+.headTitle { 
+	text-transform: uppercase;
+    margin: 0;
+    color: white; 
+    text-align: start; 
+	align-items: center;
+	display: flex; 
+	overflow: hidden;
+	float:left; 
+	position: relative; /* Use relative or static instead of absolute */
+    margin-top: 10px;  /* Use margin for spacing */
+    margin-bottom: 5px; /* Space between .headTitle and .briefIntro */
+	margin-left: 20px;
+	width:100%; 
+	font-size:50px; 
+	font-family:"SCRIPTBL"; 
+	text-shadow: 3px 3px 6px black; 
+}
+.status {
+    color: #1AFF00;
+    margin-left: 10px; /* Optional: Add some spacing between the main text and the status */
+	margin-right: 25px; /* Optional: Add some spacing between the main text and the status */
+	border: 4px solid #1AFF00;
+	border-radius: 5px; /* Optional: to give rounded corners */
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+	text-align: center;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+	font-size: 30px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+.briefIntro{
+    margin: 0;
+    color: white; 
+    text-align: start; 
+	display:block; 
+	float:left; 
+	position: relative; /* Use relative or static instead of absolute */
+    margin-top: 0px;  /* Use margin for spacing */
+    margin-bottom: 200px; /* Space between .headTitle and .briefIntro */
+	margin-left: 40px;
+	width:90%; 
+	font-size:25px; 
+	font-family:"SCRIPTBL"; 
+	text-shadow: 2px 2px 3px black; 
+	
+}
+.associationText{
+    margin: 0;
+    color: white;  /* Or whatever color your text should be */
+    text-align: end; /* Aligns the text to the center */
+	display:block; 
+	float:left; 
+	position: absolute; /* Use relative or static instead of absolute */
+	right: 10px;
+	bottom: 10px;
+	width:100%; 
+	font-size:30px; 
+	font-family:"SCRIPTBL"; 
+	text-shadow: 2px 2px 3px black; 
+	font-style: italic;
+}
+@media (max-width: 1460px) {
+    .headTitle {
+        font-size: 40px;
+    }
+	.status{
+		font-size: 20px;
+	}
+    .briefIntro {
+        font-size: 18px; 
+    }
+	.associationText {
+        font-size: 22px; 
+    }
+}
+@keyframes slideBackground {
+    from {
+        background-position: center top;
+    }
+    to {
+        background-position: center center;
+    }
+}
+@keyframes scaleBackground {
+    from {
+        background-size: 80% 80%; /* Starting from a smaller scale */
+    }
+    to {
+        background-size: cover;
+    }
+}
+.coverBackground {
+    /* Set a fixed height for the display port */
+    height: 400px; /* Adjust as needed */
+    width: 100%;
+    margin-top: 100px;
+	
+    /* Set the background image */
+    background-image: url("images/Works_Thumbnail_Project_VRMuseum_poster.jpg");
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+	position: relative;
+	overflow: hidden;
+	border-bottom: 3px solid #FFFFFF;
+	box-shadow: 0px 6px 8px rgba(1, 1, 1, 0.6);
+	
+	/* Animation properties */
+    animation: slideBackground 2.5s ease-in-out; /* Non-linear effect */
+}	
+.coverBackground::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(var(--blur-value, 40px)); /* Use the custom property */
+    -webkit-backdrop-filter: blur(var(--blur-value, 40px)); /* For Safari compatibility */
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+.media_row{
+	position: relative;
+	display: flex; 
+	flex-wrap: wrap; /* This allows the items to wrap onto the next line */
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	min-width: 100px;
+}
+.media{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.media-description {
+    margin-top: 5px;  /* Add some space between the media and the description */
+    font-size: 18px;  /* Adjust font size as needed */
+    color: #666;      /* Adjust color as needed */
+    text-align: center; /* Center the text */
+}
+.media_row-highlights {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.media_row-highlights .media-highlights img {
+    width: 100%;          /* Stretch the image to the full width of its container */
+    height: auto;         /* Maintain the image's aspect ratio */
+    object-fit: contain;  /* Ensures the image fits within the content box without cropping */
+}
+.media-highlights {
+    padding: 0.5%;  /* Adjust this percentage as needed */
+    flex-basis: calc(33.33% - 10%); /* Adjusts the base width considering the padding */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    max-width: 400px;
+    max-height: 400px;
+	overflow: hidden;
+}
+.media-highlights img{
+	background-color: #e0e0e0;
+}
+.media-highlights:hover {
+    transform: scale(1.1); /* Slightly enlarges the image */
+    opacity: 0.8; /* Makes the image slightly transparent */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+}
+.media-highlights:not(:hover) {
+    transform: scale(1.00); /* Slightly enlarges the image */
+    opacity: 1; /* Makes the image slightly transparent */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+}
+.highlights_strokeline {
+    text-align: center; /* Center everything */
+    width: 100%; /* Take up the full width of its container */
+    position: relative; /* Set position context for the underline */
+	display: block;
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px gray;
+	padding:0% 5% 0% 5%;
+	margin-top: 100px;
+}
+.underline {
+    width: 100%; /* Set the underline to be 80% of its container's width */
+    height: 3px; /* Thickness of the underline */
+    background-color: #00202F; /* Color of the underline */
+    margin: 10px auto 0; /* Center the underline and give space above it */
+	box-shadow: 2px 2px 2px gray;
+	margin-bottom: 30px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* This ensures the modal doesn't capture clicks when it's not active */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.2s;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    display: block;
+    max-width: 90%; /* Adjust as needed */
+    animation-name: zoom;
+    animation-duration: 0.2s; /* Faster transition */
+	margin: auto; /* This helps in centering */
+	margin-top: 10vh;
+    max-height: 80vh; /* This ensures the image doesn't exceed the viewport height */
+	transition: transform 0.2s;
+}
+.modal-content.shrink {
+    transform: scale(0);
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+.close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+</style>
+<title>chongyang.io</title>
+</head>
+<body>
+<div class="container">
+	<div class="row header">
+		<div class="col-md-1 text-left">
+			<h1 class="website">CHONGYANG.IO</h1>
+		</div>
+		<div class="col-md-11 text-right"> 
+			<a href="index.html#myWorks" class="nav-link">
+				<span class="icon" id="icon1"></span> 
+				<span class="link-text">My Works.</span>
+			</a> 
+			<a href="index.html#skill" class="nav-link">
+				<span class="icon" id="icon2"></span> 
+				<span class="link-text">Skill Set</span>
+			</a> 
+			<a href="index.html#interest" class="nav-link">
+				<span class="icon" id="icon3"></span> 
+				<span class="link-text">Interest</span>
+			</a> 
+			<a href="index.html#about" class="nav-link">
+				<span class="icon" id="icon4"></span> 
+				<span class="link-text">About Me</span>
+			</a> 
+		</div>
+	</div>
+  	<div class="coverBackground">
+		<div class="headTitle">"Time Traveler" Museum</div>
+		<div class="briefIntro">An interactive and immersive museum experience allowing users to dive deep into the history and evolution of the artifact.</div>
+		<div class="associationText">2021, Associated with: TC Game Research Lab, Team with: Jenny Wu, Ivy Wu, Zhang Qi, Zoe Ye</div>
+	</div>
+    <div class="row one">
+		<div class="t_title">Problem / Rationale</div>
+  	  <div class="contain_text">
+			In a classic VR museum experience, people are only are able to navigate through listed static information in a less interactable way. This restricts the potential of VR as a powerful immersive media. <strong>Inspired by the documentaries in between Age of Empire 4 campaigns</strong>, we wonder if we can build some more interactive experiences that allow players to immerse themselves back to the age the museum artifact was originated, crafted, and evolved.<br><br>
+		</div>
+		<div class="media_row">
+			<div class="media">
+		      <iframe width="900" height="600" src="https://www.youtube.com/embed/KFDY0kjR9ik?list=PLZTT8whia3Ulppz8_0-ZCAf3KBiK9h4Vq" title="Age of Empires IV Documentaries Ep 01 Building a Castle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		      <p class="media-description">Documentary Cutscenes between Campaigns - Castle</p>
+			</div>
+			<div class="media">
+			  <iframe width="900" height="600" src="https://www.youtube.com/embed/M38p6DHt9Dc" title="Age of Empires IV Documentaries Ep 02 The Crossbow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<p class="media-description">Documentary Cutscenes between Campaigns - Crossbow</p>
+			</div>
+		</div>
+		<div class="t_title">Ideation</div>
+		<div class="contain_text">
+			With a review in existing products and theories, we plan to launch this project by user research, trying to understand what's the exciting and frustrating parts for possible target audience.<br><br>
+			
+			Research shows motivation is key factor. An <strong>inviting and playful interactive experience</strong> can enhance the motivation of the learner, specially K-12 children who are in our audience range. Imagine when you are about to learn the history of the artifact displayed in the museum, such as a temple lasting for 1000 years, the great sword used by Alexanda the Great, or the first firearm invented accidentally by ancient Chinese alchemists, besides reading the history and stories from a plain 2D UIs, you can also warp into the age where the artifact was born, play a role in first-person, view it, craft it, use it, navigate inside, participate the story forging its glory...<br><br>
+			
+			Some sample designs can be best presented like:<br>
+			&nbsp;&nbsp; - Artifact: xxxx Temple<br>
+			&nbsp;&nbsp; - Story: How was the xxxx temple built. Story begins with the religious rituals...extend the story to its cultural influence...Legacy...<br>
+			&nbsp;&nbsp; - Role-Play and Game Design: A missionary. Along with learning the history through an audiobook and UIs, there are some game events such as ringing the bell, spreading beliefs...<br><br>
+			
+			&nbsp;&nbsp; - Artifact: Gunpowder<br>
+			&nbsp;&nbsp; - Story: How was first gunpowder invented in Ancient China. Story begins with the Emperor's dream to live forever...He hired Taoists (sometimes also known as early age Chinese alchemists) to synthesize and test substances that extend human life...Explosion...Surprising founding...Make fireworks...<br>
+			&nbsp;&nbsp; - Role-Play and Game Design: A taoist (alchemist). Along with learning the history through an audiobook and UIs, there are some game events such as boiling with the pot, synthesizing powder, launching fireworks...<br><br>
+			
+			In general, we aim to create a playable, relaxing, fun, vivid, story-telling, immsersive and interactive museum artifact learning experience.<br><br>
+		</div>
+		<div class="media_row">
+			<div class="media">
+		      <img src="https://www.napiermuseum.org/artifacts_img/large/Model%20of%20Guruvayoor%20Temple_21122017151854.jpg" alt="img not supported" style="max-width: 600px;">
+			    <p class="media-description">Guruvayoor Temple in Napier Museum</p>
+			</div>
+			<div class="media">
+		      <img src="https://qph.cf2.quoracdn.net/main-qimg-6d0f1b7344812bbb55e25afc62459ce9.webp" alt="img not supported" style="max-width: 800px;">
+			    <p class="media-description">Taoist and Gunpowder</p>
+			</div>
+		</div><br><br>
+		<div class="t_title">Implementation / Prototype</div>
+		<div class="contain_text">
+			Build a prototype with minimal features, including:<br>
+			&nbsp;&nbsp; - 2 samples scenes, one for the museum artifact display, another one for immersive artifact history.<br>
+			&nbsp;&nbsp; - Some basic interactions.<br>
+			&nbsp;&nbsp; - UX flow.<br>
+			&nbsp;&nbsp; - Basic UIs.<br>
+			&nbsp;&nbsp; - Some aesthetics.<br><br>
+		</div>
+	  	<div class="media_row">
+			<div class="media">
+		      <img src="images/pages/vrmuseum/2.jpg" alt="img not supported" style="max-width: 800px;">
+			    <p class="media-description">User Story</p>
+			</div>
+			<div class="media">
+			    <img src="images/pages/vrmuseum/3.jpg" alt="img not supported" style="max-width: 800px;">
+			    <p class="media-description">User Flow</p>
+		  </div>
+		</div><br><br>
+		<div class="t_title">Deliverables</div>
+		<div class="contain_text">
+	    	You can find the <a href="https://www.figma.com/file/ckw1PA6WB4giZ021R5rWy1/VR-Museum-Assets?type=design&node-id=0-1&mode=design&t=kWLJJFFZPQXHk5UI-0">UI prototype in Figma, click here</a>. And a <a href="https://docs.google.com/document/d/1wrEEgLQ_qqCmZHgTXOKh_6PFu4_MsfoN/edit?usp=sharing&ouid=112956475614311498773&rtpof=true&sd=true">short report, click here</a>. 
+		</div>
+   	  	<div class="media_row">
+		  <div class="media">
+      	    <iframe width="1000" height="620" src="https://www.youtube.com/embed/ciWXcNB6pgc" title="Cutscenes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	        <p class="media-description">Prototype Showcase (Original video is in 60fps, however the only one I found can be uploaded is broken :( )</p>
+		  </div>
+		</div><br><br>
+		<div class="t_title">Future Work</div>
+		<div class="contain_text">
+	      Iterate future versions till completing our design solution. Constantly communicate with customers, collecting valuable feedback for improvement. Polish aesthetics. Add more level contents, etc. In general, add more stuff!<br><br>
+		</div>
+        <div class="t_title">Team Roles (Not Ranked by Contribution, everyone works the best for the team)</div>
+        <div class="contain_text">
+			  &nbsp;&nbsp;&nbsp;&nbsp; - Chongyang(Me): Team Leader, Unity Developer, Level/Game Designer, Researcher, Artist<br />
+			  <br>
+			  &nbsp;&nbsp;&nbsp;&nbsp; - Jenny: UI/UX Designer, Product Researcher<br />
+			  <br>
+			  &nbsp;&nbsp;&nbsp;&nbsp; - Ivy: UI/UX Designer, UI artist, Learning Specialist <br />
+			  <br>
+			  &nbsp;&nbsp;&nbsp;&nbsp; - Qi: Learning Specialist, Researcher, Documentation, Video Editor<br />
+			  <br>
+			  &nbsp;&nbsp;&nbsp;&nbsp; - Zoe: Learning Specialist, Researcher, Documentation, Video Editor <br />
+		  	<br>
+	  </div>
+		<div class="t_title">My Major Contributions</div>
+      <div class="contain_text">
+			&nbsp;&nbsp;&nbsp;&nbsp; - Raised the very first, original project idea.<br /><br>
+		    &nbsp;&nbsp;&nbsp;&nbsp; - Developed prototypes in Unity iteratively, coded everything.<br /><br>
+		  	&nbsp;&nbsp;&nbsp;&nbsp; - Designed and developed Unity scene levels and artworks.<br /><br>
+			&nbsp;&nbsp;&nbsp;&nbsp; - Contributed creative game design ideas. <br /><br>
+		  	&nbsp;&nbsp;&nbsp;&nbsp; - Researched on related theories and existing products.<br /><br>
+		  	&nbsp;&nbsp;&nbsp;&nbsp; - Coordinated team collaboration, spliting tasks and goals for each iteration phase.<br /><br>
+	  </div>
+		<div class="highlights_strokeline">
+    		Highlights
+    		<div class="underline"></div>
+		</div>
+		<div class="media_row-highlights">
+      	    <div class="media-highlights"><img src="images/pages/vrmuseum/h1.jpg" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h2.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h3.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h4.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h5.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h6.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h7.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h8.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h9.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/vrmuseum/h10.png" alt="img not supported" onclick="openModal(this)"></div>
+		</div>
+		<!-- Image Modal -->
+		<div id="imgModal" class="modal">
+		    <!-- Close button -->
+		    <span class="close" onclick="closeModal()">&times;</span>
+		    
+		    <!-- Image container -->
+		    <img class="modal-content" id="modalImage">
+		    
+		    <!-- Image caption (optional) -->
+		    <div id="caption"></div>
+		</div>
+  	</div>
+	<div class="row footer">
+		<p class="contact-header">Contact Me:</p>
+    	<p class="contact-subtext">I quitted Facebook and Twitter in 2019, realizing they were more distracting than beneficial. I have multiple GitHub accounts, this one is for contact.</p>
+    	<a href="mailto:cwang643@gmail.com" class="social-button email-button">Email</a>
+    	<a href="https://www.linkedin.com/in/chongyang-wang-cwang643/" class="social-button linkedin-button">LinkedIn</a>
+    	<a href="https://github.com/GaryTheKid" class="social-button github-button">GitHub</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+window.openModal = function(imgElement) {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    
+	modal.style.display = "flex"; // Set display to flex here
+	modal.style.backgroundColor = "rgba(0,0,0,0.7)";
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+    captionText.innerHTML = imgElement.alt;
+
+    // Add an event listener to close the modal when the backdrop is clicked
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+}
+
+window.closeModal = function() {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImage");
+    
+    modalImg.classList.add('shrink'); // Add the shrink class to play the reverse animation
+
+    modalImg.addEventListener('transitionend', function handler() {
+        modal.style.backgroundColor = "rgba(0,0,0,0)";
+        modalImg.classList.remove('shrink'); // Remove the shrink class
+        modal.style.display = "none";
+        modalImg.removeEventListener('transitionend', handler); // Remove the event listener after it's called once
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Function to update the blur value
+    function updateBlur() {
+        const coverBackground = document.querySelector('.coverBackground');
+        const windowWidth = window.innerWidth;
+
+        // Determine the blur value based on window width
+        let blurValue;
+        if (windowWidth > 1200) {
+            blurValue = '30px';
+        } else if (windowWidth > 800) {
+            blurValue = '10px';
+        } else {
+            blurValue = '8px';
+        }
+        blurValue = (windowWidth * 0.008) + 'px';
+        
+        // Apply the blur value
+        coverBackground.style.setProperty('--blur-value', blurValue);
+    }
+
+    // Call the function to update blur initially
+    updateBlur();
+
+    // Add event listeners
+    window.addEventListener('resize', updateBlur);
+});
+
+</script>
+	
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>

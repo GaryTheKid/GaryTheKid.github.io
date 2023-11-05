@@ -1,0 +1,37 @@
+/*
+========================================================================
+    Header Nav Bar
+========================================================================
+*/
+.col-md-11.text-right a {    
+	display: inline-block;  /* Allows for proper vertical alignment of elements inside */
+    margin-right: 15px;     /* Adds some spacing between the links */
+    text-align: center;     /* Centers the text and the icon */
+    vertical-align: top;    /* Aligns the top of each link when they wrap to the next line */
+	padding-top: 15px;
+}
+.nav-link {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 10px; /* or any desired spacing between links */
+}
+.link-text {
+    display: block;
+    margin-top: -34px; /* Adjust the negative value to bring text closer to the icon */
+}
+.icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    margin: 0 auto 5px auto; /* You can adjust the 5px value to bring the icon closer or further from the text */
+}
+#icon1 {background-image: url('../images/Icons/work1.png');}
+#icon2 {background-image: url('../images/Icons/skill1.png');}
+#icon3 {background-image: url('../images/Icons/goal1.png');}
+#icon4 {background-image: url('../images/Icons/aboutme1.png');}
+a:hover #icon1 {background-image: url('../images/Icons/work2.png');}
+a:hover #icon2 {background-image: url('../images/Icons/Skill2.png');}
+a:hover #icon3 {background-image: url('../images/Icons/goal2.png');}
+a:hover #icon4 {background-image: url('../images/Icons/aboutme2.png');}
