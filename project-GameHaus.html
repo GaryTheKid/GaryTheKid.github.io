@@ -189,7 +189,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     margin-top: 100px;
 	
     /* Set the background image */
-    background-image: url("images/Works_Thumbnail_Award_tespa.png");
+    background-image: url("images/Works_Thumbnail_Project_gameHaus_poster.jpg");
     background-size: cover; /* Ensure the image covers the entire area */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the image */
@@ -256,6 +256,9 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     max-width: 400px;
     max-height: 400px;
 	overflow: hidden;
+}
+.media-highlights img{
+	background-color: #e0e0e0;
 }
 .media-highlights:hover {
     transform: scale(1.1); /* Slightly enlarges the image */
@@ -337,7 +340,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     text-decoration: none;
     cursor: pointer;
 }
-	
+
 </style>
 <title>chongyang.io</title>
 </head>
@@ -367,23 +370,48 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 		</div>
 	</div>
   	<div class="coverBackground">
-	  	<div class="headTitle">Overwatch Top 50 Competitor Award, Tespa League</div>
-		<div class="briefIntro"></div>
-		<div class="associationText">2019, Associated with: UW-Madison Esport Club</div>
+		<div class="headTitle">Game Haus</div>
+		<div class="briefIntro">A Discord alternative, a client-centered communication tool, for Esport fans. </div>
+		<div class="associationText">2019, Associated with: UW-Madison ESport Club, Team with: Qingyang Liu, Bryan O’Malley, Khai Bin Woon, Ted Martinez.</div>
 	</div>
     <div class="row one">
-	  	<div class="contain_text">
-			We reached North America Top 50, <a href="https://www.tespa.org/">Tespa League</a>.<br />
-			<br>
-			An honerable moment! Belong to the team.<br>
-			<br><br>
+		<div class="t_title">Introduction</div>
+		<div class="contain_text">
+			Help Madison eSports Club schedule Gaming Events and LFGs based on skill level and Game Stats.<br><br>
+			
+			This project earned the best project in the final course showcase, and was archived by Github.
+		</div><br><br>
+		<div class="t_title">Inspiration + Ideation + Iteration...(Full Files)</div>
+		<div class="contain_text">
+	    	<a href="https://drive.google.com/drive/folders/117C79FJbjcU5MR7hmdWsLH8dQIZ6kU8V?usp=sharing"> Find the full work insights here. </a> 
+		</div><br><br>
+		<div class="t_title">Roles &amp; Contribution</div>
+		<div class="contain_text">
+			My major role is UI/UX designer and front-end developer.
+			
+			<br><br>......<br>
+			<a href="https://docs.google.com/spreadsheets/d/1POElTr1rrfV3T2HhKUGMPpsBU27NRySe/edit?usp=drive_link&ouid=116991885895311498430&rtpof=true&sd=true"> You may find the full role + responsibility document here. </a> 
 		</div>
-		<div class="t_title">Inspiration</div>
-	  <div class="contain_text">
-			- You always need a team!<br><br>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div class="highlights_strokeline">
+    		Highlights
+    		<div class="underline"></div>
 		</div>
-	</div>
+		<div class="media_row-highlights">
+      	    <div class="media-highlights"><img src="images/pages/gamehaus/1.png" alt="img not supported" onclick="openModal(this)"></div>
+			<div class="media-highlights"><img src="images/pages/gamehaus/2.png" alt="img not supported" onclick="openModal(this)"></div>
+		</div>
+		<!-- Image Modal -->
+		<div id="imgModal" class="modal">
+		    <!-- Close button -->
+		    <span class="close" onclick="closeModal()">&times;</span>
+		    
+		    <!-- Image container -->
+		    <img class="modal-content" id="modalImage">
+		    
+		    <!-- Image caption (optional) -->
+		    <div id="caption"></div>
+		</div>
+  	</div>
 	<div class="row footer">
 		<p class="contact-header">Contact Me:</p>
     	<p class="contact-subtext">I quitted Facebook and Twitter in 2019, realizing they were more distracting than beneficial. I have multiple GitHub accounts, this one is for contact.</p>
@@ -457,6 +485,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 </script>
+	
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
 	
 </body>
 </html>
