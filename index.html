@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/skillset.css">
 <link rel="stylesheet" type="text/css" href="css/myWorks.css">
 <link rel="stylesheet" type="text/css" href="css/footerSocial.css">
+<link rel="stylesheet" type="text/css" href="css/problemMap.css">
 <style type="text/css">
 /*
 ========================================================================
@@ -19,15 +20,17 @@
 */
 @font-face{
 font-family: "LCALLIG";
-src: url('font/Wendy-Neue.ttf');
+src: url('font/Jersey_25/Jersey25-Regular.ttf') format('truetype');
+size-adjust: 108%;
 }
 @font-face{
 font-family: "SCRIPTBL";
-src: url('font/vp-pixel.simplified-demo.otf');
+src: url('font/Jersey_25/Jersey25-Regular.ttf') format('truetype');
+size-adjust: 120%;
 }
 *{ margin:0; padding:0;}
 a{ text-decoration:none; color: #000277; }
-h1.website{ font-family: "LCALLIG"; font-size:54px;}
+h1.website{ font-family: "LCALLIG"; font-size:50px;}
 body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 @keyframes scrollDown {
     from {
@@ -53,7 +56,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     z-index: 1000; 
 }
 .header h1{display:block; float:left; height:100px; line-height:100px; margin:0; margin-left:20px;}
-.header a{ display:block; float:right; color:#fff; font-size:24px; padding:0px 20px; height:100px; line-height:100px; text-transform:uppercase;}
+.header a{ display:block; float:right; color:#fff; font-size:21px; padding:0px 20px; height:100px; line-height:100px; text-transform:uppercase;}
 .header a:hover{ text-decoration:underline;}
 .container{ margin:0px auto; width:100%; padding:0px; overflow:hidden;}
 .row {border-bottom: 6px dashed #00202F;margin:0px auto; width:100%; padding:0px;}
@@ -96,7 +99,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 }
 .f_title{ display:block; float:left; width:100%; text-align:center; font-size:24px; margin-bottom:8px; text-transform:uppercase;}
 .d_title{ display:block; float:left; width:100%; font-size:36px; text-align:center; margin-top:100px; margin-bottom:10px; text-transform:uppercase; }
-.contain_text{ display:block; float:left; width:100%; text-align:left; text-indent:2em; line-height:28px; font-size:22px; margin-bottom:15px;}
+.contain_text{ display:block; float:left; width:100%; text-align:left; text-indent:2em; line-height:34px; font-size:22px; margin-bottom:15px;}
 .grid-container {
     display: grid;
     gap: 0;
@@ -145,35 +148,49 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 		</div>
         <div class="col-md-8 col-lg-9">
        	  	<div class="t_title">My Story</div>
-          	<div class="contain_text">My name is <b>Chongyang Wang</b>, usually folks call me <b>Gary</b>! I'm a <b>HCI Researcher</b> (Novel Interfaces, cognition technologies, interaction/collaboration...for more details, check the <b><a href="index.html#interest">"Interest"</a></b> Section down below), <b>Instructional Designer</b>, and a <b>Game Developer and Designer.</b></div>
-		  	<div class="contain_text">Prior to my research journey, I dreamt of emulating wizards in the entertainment world, like Miyamoto. I just LOVE every keystroke playing with game engines or other tools while trying to iterate fun ideas to reality since high school. Later, during my Columbia experiences, with the opportunities working along with prof.Joey Lee and Steven Feiner, there I found my TRUE INTEREST. Ford said, if you ask people (before automobile was invented) what they want, they always reply a faster horse wagon. Similarly, a younger me might have just wished for a cooler video game. However, in fact, what I really want may actually beyond a game bringing people just laughter, but a creative, interactive, thoughtful, or problem-solving experience, in short, some novel and fun Human-Computer Interaction experiences or interfaces typically for promoting our life. </div>
-		  	<div class="contain_text">Gladly, my game dev <b><a href="index.html#skill">skills and tools mastery</a></b> have served as a sturdy bridge during this transition. Yet, like someone said, "We will never be ready." The art of engineering and the quest for research are not usually the same path, but this may just be the allure of pursuing research that intrigues me always - we will never know what's the future looks like till we invent it. This spirit of exploration was further ignited during my Future Manufacturing research experience in the CGUI Lab (funded by NSF, produced publications such as one already accepted by <b><a href="https://dl.acm.org/doi/10.1145/3607822.3618004">ACM SUI</a></b>). What I also learned is, having creativity, critical mind, and eyes of discovery alone are not sufficient for succeeding in research, but relentless perseverance matters too (actually, let's not use the word "Success", it's for engineers and business people, doing research is about discovery, and discovering something new can't really be judged as a success or failure whatsoever, especially considered within the current timespace. After all, the joy is in the discovery, in the journey, not just the destination).</div>
-          	<div class="t_title">Education</div>
+		  	<div class="contain_text">My name is <b>Chongyang Wang</b>, usually folks call me <b>Gary</b>! I'm a <b>PhD student in Computer Science at Northeastern University</b> and a research assistant in the <b>Relational Agents Group</b> with Prof. Timothy W. Bickmore. I build and study AI agents that teach: embodied conversational agents, virtual reality, and LLM-driven tutoring, mostly for patient and health education and increasingly for education in general.</div>
+		  	<div class="story-claim">AI has driven the cost of telling to zero. It has not lowered the cost of learning.</div>
+		  	<div class="contain_text">That one judgment runs through all my work. Today's models can tell you almost anything, often better than most people, yet none of them can take a person from not knowing to actually knowing, start to finish, on its own: the whole job of a competent tutor. I split that gap into four layers, one for each part of a tutor's job: the content, the learner, the tutor-learner relationship, and institutions. You can watch the whole argument in the video below, then walk through it node by node in the <a href="index.html#interest" class="jump">Problem Map</a>.</div>
+		  	<div class="story-video" id="story-video">
+		  		<div class="sv-head"><span class="sv-kicker">The full story, 28 min</span>Why AI Still Can't Teach on Its Own</div>
+		  		<div class="sv-frame"><video id="story-video-el" controls preload="metadata" playsinline poster="images/story_video_poster.jpg"><source src="videos/why_ai_still_cant_teach_EN_720p.mp4" type="video/mp4">Your browser cannot play this video.</video></div>
+		  		<div class="sv-chapters" id="sv-chapters"></div>
+		  		<div class="sv-note">Every node in the Problem Map below also has a <b>&#9654; Watch this part</b> button that jumps straight to its moment in the video.</div>
+		  	</div>
+		  	<div class="contain_text">My PhD work tackles the first three layers with patients: <a href="#" class="jump" data-jump="card-drclara">Dr. Clara</a>, an LLM-driven agent that walks patients through their education materials in VR; <a href="#" class="jump" data-jump="card-pedlayer">a pedagogical layer</a> that takes teaching decisions out of the language model; <a href="#" class="jump" data-jump="card-teachback">teach-back</a>, where the agent checks whether anything actually stuck; and <a href="#" class="jump" data-jump="card-proxemics">life-sized VR health coaches</a>, whose rapport and physical distance shape how people respond. Outside campus I build learning tools with K-12 teachers (<a href="#" class="jump" data-jump="card-pbl">AI PBL Agent</a>, <a href="#" class="jump" data-jump="card-keyi">Keyi</a>) and teach middle schoolers to make games with AI (<a href="#" class="jump" data-jump="card-fpa">First Principle Agent</a>). That is where I learned the fourth layer.</div>
+		  	<div class="contain_text">Before Northeastern I was at Columbia University. In Prof. Joey Lee's <a href="#" class="jump" data-jump="experience_GRL">TC Game Research Lab</a> I learned that a well-designed game is a well-designed learning experience, and in Prof. Steven Feiner's <a href="#" class="jump" data-jump="experience_CGUILab">CGUI Lab</a> I worked on XR and 3D interfaces for NSF-funded human-robot collaboration in future manufacturing (<a href="#" class="jump" data-jump="publication_FMRG_multiRobot_acm_sui">ACM SUI 2023</a>).</div>
+		  	<div class="contain_text">Teaching and making have always gone together for me. As an instructional designer I authored <a href="#" class="jump" data-jump="experience_Unity">official Unity Learn courses</a> and ran game-development <a href="#" class="jump" data-jump="project_workshop_learnUnity">workshops</a>, and I still design and build games, these days a card tactics roguelike called <a href="#" class="jump" data-jump="card-boaria">For Boaria!</a>. That mix is why I care less about what an AI can say and more about what a learner walks away with.</div>
+		  	<div class="t_title">Education</div>
+          	<div class="contain_text"><strong>Ph.D. in Computer Science</strong> (in progress), <strong>Northeastern University</strong></div>
           	<div class="contain_text"><strong>M.A. in Instructional Technology</strong>, with program track - Design and Development of Digital Games, <strong>Columbia University</strong></div>
 		  	<div class="contain_text"><strong>Cert. in Game Design</strong>, <strong>University of Wisconsin - Madison</strong></div>
 		  	<div class="contain_text"><strong>B.S. in Computer Science</strong>, <strong>University of Wisconsin - Madison</strong></div>
 		  	<div class="t_title">Active Roles</div>
-		  	<div class="contain_text"><strong>Research Assistant</strong> at <strong>Columbia CGUI Lab</strong> (Computer Graphics and User Interface), <em>Supervisor: Steven K. Feiner</em></div>
-          	<div class="contain_text"><strong>Instructional Designer</strong> at <strong>Unity Technologies</strong>.</div>
+          	<div class="contain_text"><strong>Research Assistant</strong> at <strong>Relational Agents Group</strong>, Northeastern University, <em>Supervisor: Timothy W. Bickmore</em></div>
       	</div>
   	</div>
     <div class="row two">
 		<div id="interest"></div>
     	<div class="col-md-12">
-        	<div class="title" id="title-goal">My Interests/goals</div>
-			<div class="t_title">My Current goal</div>
-        	<div class="contain_text"> 
-				How to utilize immersive/cognitive technologies such as AR/VR, gaze, and cueing techniques to build noval interfaces that facilitate Visualization, Interaction, and Human-Robot/Human-Human Collaboration. 
-			</div>
-			<div class="t_title">My Long-term vision</div>
-			<div class="contain_text"> 
-		    Research and design Human-Computer/Machine/Robot (whatever you name it) Interaction techniques aligning with computer science and human cognition that create new possibilities for high-fidelity and efficient collaborative systems, transformative learning, or next-generation entertainment. To promote our life quality, work/learning efficiency, and social good in general.</div>
-			<div class="t_title">My General interest / values / point of views</div>
-			<div class="contain_text"> - Making technologies as much as accessible to everyone, enhancing human intuitiveness to ensure even those with minimal professional experience can easily navigate, use, and enjoy with motivation.</div>
-			<div class="contain_text"> - Creating game-liked experiences to solve problems, contribute social good, or simply entertain.</div>
-			<div class="t_title">In a short future</div>
- 			<div class="contain_text"> 
-				Considering all my experiences, interests, and goals, I made up my mind to <strong style="font-size: 26px; color: red">pursue a Ph.D.</strong> in <strong style="font-size: 26px; color: red">CS/HCI/HCC field</strong>, where I will continue my journey of research.  
+        	<div class="title" id="title-goal">The Problem Map</div>
+			<div class="pmap">
+				<div class="pmap-lead">AI tells you things very well, often better than most people. What it cannot yet do is <b>teach</b>: do the whole job of a competent tutor and carry one person from not knowing to knowing, start to finish. This map is how I take that gap apart. It is also the architecture of my research: understand the material, understand the learner, deliver in real time, plus a fourth layer I only saw by building things outside the lab. Click any node.</div>
+				<div class="pmap-root"><small>The root question</small>Why can't AI teach a person on its own, from start to finish?<span class="rnote">Teaching on its own = the whole job of a competent tutor</span></div>
+				<div class="pgraph" id="pgraph"></div>
+				<div class="pmap-layers" id="pmap-layers"></div>
+				<div class="pmap-legend" id="pmap-legend"></div>
+				<div class="pmap-detail" id="pmap-detail"></div>
+				<div class="pmap-why">
+					<div class="t_title">Why this is worth the long haul</div>
+					<p>Suppose AI becomes a hundred times stronger. What must a person still do for themselves? Make the decisions about their own life: whether to take this drug, have this operation, believe this piece of news. To decide, you have to understand at least a little, so human cognition cannot be fully outsourced, and people must keep the ability to learn.</p>
+					<p>The most effective teaching we know, one-on-one and personalized, is also the scarcest, so it goes to those who can pay or know the right people. An AI that can truly teach could fill that gap, but only if it gets past telling. For most people the bottleneck was never a shortage of material; it is motivation, trust, and whether they can keep going. Flipped over, the map becomes four design goals:</p>
+					<div class="goals">
+						<div class="goal"><b>Efficient</b>More of what is taught actually stays, per minute of learning.</div>
+						<div class="goal"><b>Low pain</b>The effort of learning can be reduced, never removed.</div>
+						<div class="goal"><b>Stable over time</b>Not the novelty of one session, but months and years of company.</div>
+						<div class="goal"><b>Through a narrow channel</b>Still leaving a trace through text, voice and a screen.</div>
+					</div>
+				</div>
 			</div>
         </div>
     </div>
@@ -189,10 +206,10 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     </div>
 	<div class="row four">
 		<div id="myWorks"></div>
-		<div class="title" id="title-work">Discover My Work from ? Aspects</div>
+		<div class="title" id="title-work">Discover My Work from 5 Aspects</div>
 		<div class="contain_text" id="work-intro">
 		    I've arranged things this way to show the evolution my work and interests/focus. <br>
-			The sequence <b>(left &gt; right; top &gt; bottom, not strickly though)</b> represents the proximity of each item to my current focus and interests. Dive into my:<br>
+			The sequence <b>(left &gt; right; top &gt; bottom, not strictly though)</b> represents the proximity of each item to my current focus and interests. Dive into my:<br>
 		    <b>EXPERIENCE</b>: roles<br>
 		    <b>PUBLICATION</b>: recognized or published papers and products<br>
 		    <b>PROJECT</b>: formal, systematic series of tasks with professional guidance<br>
@@ -212,9 +229,121 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
         	<button id="works-button-developer">Developer</button>
         	<button id="works-button-designer">Designer</button>
         	<button id="works-button-game">Game Guy</button>
+        	<button id="works-button-educator">Educator</button>
     	</div>
         <!-- Tab content grid -->
         <div class="grid-container">
+			<a href="project-DrClara.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-developer works-item-designer works-item-educator visible" id="card-drclara" style="background-image: url('images/Works_Thumbnail_Project_DrClara_poster.jpg');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-under review</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Dr. Clara: VR Patient Educator</h3>
+    			        <p class="grid-item-description">an LLM-driven embodied agent that turns patient education pamphlets into guided, multimodal lessons in VR; NIH-funded &middot; map 1.2, 1.3, 2.1, 3.2</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-PedLayer.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-developer works-item-educator visible" id="card-pedlayer" style="background-image: url('images/Works_Thumbnail_Project_PedLayer_poster.jpg');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Presence Is Not Pedagogy</h3>
+    			        <p class="grid-item-description">a pedagogical layer between the LLM and the embodied agent: concept maps, 24 teaching patterns, 363 typed teaching actions &middot; map 1.1, 1.3, 2.1, 3.2</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-TeachBack.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-developer works-item-educator visible" id="card-teachback" style="background-image: url('images/Works_Thumbnail_Project_TeachBack_poster.jpg');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-under review</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Did You Get That? Teach-Back</h3>
+    			        <p class="grid-item-description">an embodied agent asks people to explain in their own words, an LLM judges, the agent reteaches; randomized study, N=50 &middot; map 2.3, 3.2</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-Proxemics.html" class="grid-item-link">
+    			<div class="grid-item works-item-research visible" id="card-proxemics" style="background-image: url('images/Works_Thumbnail_Project_Proxemics_poster.jpg');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-published</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Life-Sized VR Health Coaches</h3>
+    			        <p class="grid-item-description">rapport-building behaviors and agent approach in VR health coaching; people stood closer afterwards; IVA 2026 &middot; map 3.1</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="experience-RelationalAgents.html" class="grid-item-link">
+    			<div class="grid-item works-item-research works-item-developer works-item-designer visible" id="card-ra" style="background-image: url('images/Works_Thumbnail_Experience_RAG.png');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">EXPERIENCE</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
+    			    <div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Research Assistant</h3>
+    			        <p class="grid-item-description">at Relational Agents Group, Northeastern University, 08/2024 - Now</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-AIPBLAgent.html" class="grid-item-link">
+    			<div class="grid-item works-item-developer works-item-designer works-item-educator visible" id="card-pbl">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_PBLAgent_poster.jpg" data-src="images/Works_Thumbnail_Project_PBLAgent.mp4">
+    					Your browser does not support the video tag.
+				  	</video>
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-personal</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">AI PBL Agent</h3>
+    			        <p class="grid-item-description">turns a teacher's lesson plan into an interactive project-based course, with a Socratic AI companion for every student &middot; map 1.1, 3.3, 3.4, 4.2</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-FPA.html" class="grid-item-link">
+    			<div class="grid-item works-item-designer works-item-educator works-item-game visible" id="card-fpa" style="background-image: url('images/Works_Thumbnail_Project_FPA_poster.jpg');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-teaching</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">First Principle Agent</h3>
+    			        <p class="grid-item-description">a weekly AI workshop I design and teach for middle schoolers: they build games with AI, test them on real players, and iterate &middot; map 3.3</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-Keyi.html" class="grid-item-link">
+    			<div class="grid-item works-item-developer works-item-designer works-item-educator visible" id="card-keyi" style="background-image: url('images/Works_Thumbnail_Project_Keyi_poster.jpg');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-personal</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">Keyi: Aha-First Courses</h3>
+    			        <p class="grid-item-description">drop in a document, get readings, 2D interactives, quizzes and 3D scenes built around the few insights a learner must leave with &middot; map 1.1, 1.2</p>
+    			    </div>
+    			</div>
+			</a>
+			<a href="project-Boaria.html" class="grid-item-link">
+    			<div class="grid-item works-item-developer works-item-designer works-item-game visible" id="card-boaria" style="background-image: url('images/Works_Thumbnail_Project_Boaria_poster.jpg');">
+    			    <div class="grid-item-cover"></div>
+    			    <div class="grid-item-attribute">PROJECT-personal</div>
+    			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
+    			    <div class="grid-item-status-ongoing">Ongoing</div>
+    			    <div class="grid-item-content">
+    			        <h3 class="grid-item-title">For Boaria!</h3>
+    			        <p class="grid-item-description">an indie medieval-fantasy card tactics roguelike; 24 playable prototypes in seven weeks and an AI ladder to test faction balance</p>
+    			    </div>
+    			</div>
+			</a>
         	<a href="https://dl.acm.org/doi/10.1145/3607822.3618004" class="grid-item-link">
     			<div class="grid-item works-item-research visible" id="publication_FMRG_multiRobot_acm_sui">
     			    <div class="grid-item-cover"></div>
@@ -228,13 +357,12 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-FMRG-MultiRobot.html" class="grid-item-link">
     			<div class="grid-item works-item-research works-item-designer works-item-developer visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_FMRG-multiRobot-poster.jpg" data-src="images/Works_Thumbnail_Project_FMRG-multiRobot.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_FMRG-multiRobot-poster.jpg" data-src="images/Works_Thumbnail_Project_FMRG-multiRobot.mp4">
     					Your browser does not support the video tag.
 				  	</video>
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">PROJECT-for publication</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
-					<div class="grid-item-status-ongoing">Ongoing</div>
    			      	<div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
     			    <div class="grid-item-content">
     			        <h3 class="grid-item-title">FMRG-MultiRobot</h3>
@@ -244,13 +372,12 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-FMRG-GazeCollab.html" class="grid-item-link">
     			<div class="grid-item works-item-research works-item-designer works-item-developer visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_FMRG-gazeCollab-poster.jpg" data-src="images/Works_Thumbnail_Project_FMRG-gazeCollab.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_FMRG-gazeCollab-poster.jpg" data-src="images/Works_Thumbnail_Project_FMRG-gazeCollab.mp4">
     					Your browser does not support the video tag.
 				  </video>
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">PROJECT-for publication</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
-					<div class="grid-item-status-ongoing">Ongoing</div>
 					<div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
     			    <div class="grid-item-content">
     			        <h3 class="grid-item-title">FMRG-GazeCollab</h3>
@@ -263,22 +390,20 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">EXPERIENCE</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
-					<div class="grid-item-status-ongoing">Ongoing</div>
     			    <div class="grid-item-content">
-    			        <h3 class="grid-item-title">Research Assisntant</h3>
-    			        <p class="grid-item-description">at CGUI Lab, 05/2022 - Now</p>
+    			        <h3 class="grid-item-title">Research Assistant</h3>
+    			        <p class="grid-item-description">at CGUI Lab, 05/2022 - 08/2024</p>
     			    </div>
     			</div>
 			</a>
 			<a href="project-UnityCourse.html" class="grid-item-link">
-    			<div class="grid-item works-item-research works-item-designer works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_UnityGPTCourse_poster.jpg" data-src="images/Works_Thumbnail_Project_UnityGPTCourse.mp4">
+    			<div class="grid-item works-item-educator works-item-research works-item-designer works-item-developer works-item-game visible">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_UnityGPTCourse_poster.jpg" data-src="images/Works_Thumbnail_Project_UnityGPTCourse.mp4">
     					Your browser does not support the video tag.
 				  </video>
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">PROJECT-for publication</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
-					<div class="grid-item-status-ongoing">Ongoing</div>
 					<div class="grid-item-attribute-icon-2rd grid-item-attribute-icon-publication"></div>
     			    <div class="grid-item-content">
     			        <h3 class="grid-item-title">Unity Dev "Cheat Mode"</h3>
@@ -287,20 +412,19 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			</div>
 			</a>
 			<a href="experience-Unity.html" class="grid-item-link">
-    			<div class="grid-item works-item-research works-item-designer works-item-developer works-item-game visible" id="experience_Unity">
+    			<div class="grid-item works-item-educator works-item-research works-item-designer works-item-developer works-item-game visible" id="experience_Unity">
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">EXPERIENCE</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
-					<div class="grid-item-status-ongoing">Ongoing</div>
     			    <div class="grid-item-content">
     			        <h3 class="grid-item-title">Instructional Designer</h3>
-    			        <p class="grid-item-description">at Unity Technologies., 05/2023 - Now</p>
+    			        <p class="grid-item-description">at Unity Technologies., 05/2023 - 08/2024</p>
     			    </div>
     			</div>
 			</a>
 			<a href="project-VRSandbox.html" class="grid-item-link">
-   			<div class="grid-item works-item-research works-item-designer works-item-developer visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_physicsVRSandbox-poster.jpg" data-src="images/Works_Thumbnail_Project_physicsVRSandbox.mp4">
+   			<div class="grid-item works-item-educator works-item-research works-item-designer works-item-developer visible">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_physicsVRSandbox-poster.jpg" data-src="images/Works_Thumbnail_Project_physicsVRSandbox.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -315,7 +439,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="thought-VRLocomotion.html" class="grid-item-link">
    			<div class="grid-item works-item-research works-item-designer works-item-developer visible" >
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Thought_VRLocomotion_poster.jpg" data-src="images/Works_Thumbnail_Thought_VRLocomotion.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Thought_VRLocomotion_poster.jpg" data-src="images/Works_Thumbnail_Thought_VRLocomotion.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -329,7 +453,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-ARMath.html" class="grid-item-link">
    				<div class="grid-item works-item-designer works-item-developer visible" >
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_ARMathFunction_Poster.jpg" data-src="images/Works_Thumbnail_Project_ARMathFunction.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_ARMathFunction_Poster.jpg" data-src="images/Works_Thumbnail_Project_ARMathFunction.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -343,7 +467,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-FPSGaze.html" class="grid-item-link">
     			<div class="grid-item works-item-research works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_FPSGaze-poster.jpg" data-src="images/Works_Thumbnail_Project_FPSGaze.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_FPSGaze-poster.jpg" data-src="images/Works_Thumbnail_Project_FPSGaze.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -357,7 +481,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-VRMuseum.html" class="grid-item-link">
     			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_VRMuseum_poster.jpg" data-src="images/Works_Thumbnail_Project_VRMuseum.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_VRMuseum_poster.jpg" data-src="images/Works_Thumbnail_Project_VRMuseum.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -371,7 +495,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-AIFallacy.html" class="grid-item-link">
     			<div class="grid-item works-item-research works-item-designer visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_AIFallacy_poster.jpg" data-src="images/Works_Thumbnail_Project_AIFallacy.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_AIFallacy_poster.jpg" data-src="images/Works_Thumbnail_Project_AIFallacy.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -385,7 +509,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="thought-ARImpairment.html" class="grid-item-link">
     			<div class="grid-item works-item-research works-item-designer visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_ARDeepWater_poster.jpg" data-src="images/Works_Thumbnail_Project_ARDeepWater.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_ARDeepWater_poster.jpg" data-src="images/Works_Thumbnail_Project_ARDeepWater.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -393,7 +517,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-thought"></div>
     			    <div class="grid-item-content">
     			        <h3 class="grid-item-title">Conquer Physical Impairment</h3>
-    			        <p class="grid-item-description">designing prototypes for AR/Neural Interfaces for harsh environment (like deep watch or space) task assistance and collaboration</p>
+    			        <p class="grid-item-description">designing prototypes for AR/Neural Interfaces for harsh environment (like deep water or space) task assistance and collaboration</p>
     			    </div>
     			</div>
 			</a>
@@ -409,8 +533,8 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			</div>
 			</a>
 			<a href="project-VRMisconception.html" class="grid-item-link">
-   			<div class="grid-item works-item-design works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_VRCombatClimateChange_poster.jpg" data-src="images/Works_Thumbnail_Project_VRCombatClimateChange.mp4">
+   			<div class="grid-item works-item-designer works-item-game visible">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_VRCombatClimateChange_poster.jpg" data-src="images/Works_Thumbnail_Project_VRCombatClimateChange.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -423,8 +547,8 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			</div>
 			</a>
 			<a href="project-workshop-GPTMultiplayer.html" class="grid-item-link">
-   			<div class="grid-item works-item-research works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_GRLWorkshop-GPTmultiplayer_poster.jpg" data-src="images/Works_Thumbnail_Project_GRLWorkshop-GPTmultiplayer.mp4">
+   			<div class="grid-item works-item-educator works-item-research works-item-developer works-item-game visible">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_GRLWorkshop-GPTmultiplayer_poster.jpg" data-src="images/Works_Thumbnail_Project_GRLWorkshop-GPTmultiplayer.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -438,7 +562,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-flooded.html" class="grid-item-link">
    			<div class="grid-item works-item-research works-item-designer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_flooded_poster.jpg" data-src="images/Works_Thumbnail_Project_flooded.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_flooded_poster.jpg" data-src="images/Works_Thumbnail_Project_flooded.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -453,7 +577,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-gameWeb.html" class="grid-item-link">
     			<div class="grid-item works-item-designer works-item-developer works-item-game visible" id="project_gamifiedProfileWeb">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_gamifiedProfileWeb_poster.jpg" data-src="images/Works_Thumbnail_Project_gamifiedProfileWeb.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_gamifiedProfileWeb_poster.jpg" data-src="images/Works_Thumbnail_Project_gamifiedProfileWeb.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -466,8 +590,8 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			</div>
 			</a>
 			<a href="project-workshop-learnUnity.html" class="grid-item-link">
-    			<div class="grid-item works-item-research works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_learnUnityInUnity_poster.jpg" data-src="images/Works_Thumbnail_Project_learnUnityInUnity.mp4">
+    			<div class="grid-item works-item-educator works-item-research works-item-developer works-item-game visible" id="project_workshop_learnUnity">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_learnUnityInUnity_poster.jpg" data-src="images/Works_Thumbnail_Project_learnUnityInUnity.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -480,25 +604,24 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			</div>
 			</a>
 	  	  	<a href="experience-GRL.html" class="grid-item-link">
-    			<div class="grid-item works-item-research works-item-designer works-item-developer works-item-game visible" id="experience_GRL">
+    			<div class="grid-item works-item-educator works-item-research works-item-designer works-item-developer works-item-game visible" id="experience_GRL">
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">EXPERIENCE</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
     			    <div class="grid-item-content">
-    			        <h3 class="grid-item-title">Lab Assisntant</h3>
+    			        <h3 class="grid-item-title">Lab Assistant</h3>
     			        <p class="grid-item-description">at TC Game Research Lab, 09/2021 - 05/2023</p>
     			    </div>
     			</div>
 			</a>
 			<a href="project-topdownPixel.html" class="grid-item-link">
     			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_topdownPixelGame_poster.jpg" data-src="images/Works_Thumbnail_Project_topdownPixelGame.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_topdownPixelGame_poster.jpg" data-src="images/Works_Thumbnail_Project_topdownPixelGame.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">PROJECT</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-project"></div>
-					<div class="grid-item-status-ongoing">Ongoing</div>
     			    <div class="grid-item-content">
     			        <h3 class="grid-item-title">Topdown Pixel BR Game</h3>
     			        <p class="grid-item-description">a topdown pixel multiplayer battle-royale game, leading a community to iteratively build a commercial game</p>
@@ -507,7 +630,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-hdrpTank.html" class="grid-item-link">
     			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_HDRPTank_poster.jpg" data-src="images/Works_Thumbnail_Project_HDRPTank.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_HDRPTank_poster.jpg" data-src="images/Works_Thumbnail_Project_HDRPTank.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -521,7 +644,7 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
 			<a href="project-oneManArmy.html" class="grid-item-link">
     			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_oneManArmy_poster.jpg" data-src="images/Works_Thumbnail_Project_oneManArmy.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_oneManArmy_poster.jpg" data-src="images/Works_Thumbnail_Project_oneManArmy.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -538,17 +661,16 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			    <div class="grid-item-cover"></div>
     			    <div class="grid-item-attribute">EXPERIENCE</div>
     			    <div class="grid-item-attribute-icon grid-item-attribute-icon-experience"></div>
-					<div class="grid-item-status-ongoing">Ongoing</div>
     			    <div class="grid-item-content">
     			        <h3 class="grid-item-title">Founder, Director</h3>
-    			        <p class="grid-item-description">at Spectrum Forge GameDev Community, 10/2019 - Now</p>
+    			        <p class="grid-item-description">at Spectrum Forge GameDev Community, 10/2019 - 08/2024</p>
     			    </div>
     			</div>
 			</a>
 			
 			<a href="project-mission.html" class="grid-item-link">
     			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_missionGame_poster.jpg" data-src="images/Works_Thumbnail_Project_missionGame.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_missionGame_poster.jpg" data-src="images/Works_Thumbnail_Project_missionGame.mp4">
     					Your browser does not support the video tag.
 					</video>
     			    <div class="grid-item-cover"></div>
@@ -560,9 +682,9 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
     			    </div>
     			</div>
 			</a>
-			<a href="project-mission.html" class="grid-item-link">
+			<a href="project-GameHaus.html" class="grid-item-link">
     			<div class="grid-item works-item-designer works-item-developer works-item-game visible">
-					<video class="background-video" autoplay loop muted playsinline poster="images/Works_Thumbnail_Project_gameHaus_poster.jpg" data-src="images/Works_Thumbnail_Project_gameHaus.mp4">
+					<video class="background-video" loop muted playsinline poster="images/Works_Thumbnail_Project_gameHaus_poster.jpg" data-src="images/Works_Thumbnail_Project_gameHaus.mp4">
     					Your browser does not support the video tag.
 				  </video>
     			    <div class="grid-item-cover"></div>
@@ -643,6 +765,15 @@ body{ background:#00202F; background-size:cover; font-family: "SCRIPTBL";}
 			</a>
     	</div>
     </div>
+	<div class="row pubs" id="publications">
+		<div class="title" id="title-pubs" style="color:#00202F; text-shadow:none; padding-bottom:20px;">Publications</div>
+		<ul class="pub-list">
+			<li>Zhuorui Yong, <b>Chongyang Wang</b>, Timothy Bickmore. <a href="https://doi.org/10.1145/3806774.3827988">Life-Sized Virtual Health Coaches in VR: Rapport-Building Behaviors and Their Effects on Health Attitudes and Proxemics</a>. <span class="venue">ACM International Conference on Intelligent Virtual Agents (IVA 2026).</span></li>
+			<li><b>Chongyang Wang</b>, Mina Fallah, Akilan Baskar, Michael Paasche-Orlow, Timothy Bickmore. A Large Language Model&ndash;Driven Embodied Conversational Agent for Patient Education in Virtual Reality: Mixed Methods Usability Study.<span class="tag">currently under review</span></li>
+			<li>Mina Fallah, <b>Chongyang Wang</b>, Timothy Bickmore. Did You Get That? Open-Ended Teach-Back with an Embodied Conversational Agent and an LLM Judge.<span class="tag">currently under review</span></li>
+			<li>Jen-Shuo Liu, <b>Chongyang Wang</b>, Barbara Tversky, Steven Feiner. <a href="https://dl.acm.org/doi/10.1145/3607822.3618004">A Testbed for Exploring Virtual Reality User Interfaces for Assigning Tasks to Agents at Multiple Sites</a>. <span class="venue">ACM Symposium on Spatial User Interaction (SUI 2023).</span></li>
+		</ul>
+	</div>
 	<div class="row footer">
 		<p class="contact-header">Contact Me:</p>
     	<p class="contact-subtext">I quitted Facebook and Twitter in 2019, realizing they were more distracting than beneficial. I have multiple GitHub accounts, this one is for contact.</p>
@@ -769,6 +900,32 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('works-button-all').click();
 });
 
+// thumbnails: static poster by default, play on hover
+function ensureVideoSource(video) {
+    if (!video.querySelector('source')) {
+        let source = document.createElement('source');
+        source.src = video.getAttribute('data-src');
+        source.type = 'video/mp4';
+        video.appendChild(source);
+        video.load();
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.grid-item').forEach(function(item) {
+        let video = item.querySelector('.background-video');
+        if (!video) return;
+        item.addEventListener('mouseenter', function() {
+            ensureVideoSource(video);
+            let p = video.play();
+            if (p !== undefined) { p.catch(function() {}); }
+        });
+        item.addEventListener('mouseleave', function() {
+            video.pause();
+            video.currentTime = 0;
+        });
+    });
+});
+
 // load videos after page loaded
 window.addEventListener('load', function() {
     let videos = document.querySelectorAll('.background-video');
@@ -778,14 +935,8 @@ window.addEventListener('load', function() {
     let warningText = document.querySelector('.warningText');
 	let loadBar = document.querySelector('.loadBar');
 	
-    videos.forEach(function(video) {
-        let source = document.createElement('source');
-        source.src = video.getAttribute('data-src');
-        source.type = 'video/mp4';
-        video.appendChild(source);
-
-        video.addEventListener('loadeddata', function() {
-            loadedVideos++;
+    function countLoaded() {
+        loadedVideos++;
             let progressPercentage = (loadedVideos / totalVideos) * 100;
             progressBar.style.width = progressPercentage + '%';
 
@@ -793,14 +944,18 @@ window.addEventListener('load', function() {
                 warningText.style.display = 'none';
 				loadBar.style.display = 'none';
             }
-        });
+    }
 
-        video.load();
+    videos.forEach(function(video) {
+        if (video.readyState >= 2) { countLoaded(); return; }
+        video.addEventListener('loadeddata', countLoaded, { once: true });
+        ensureVideoSource(video);
     });
 });
 
 </script>
 	
+<script src="js/problemMap.js" type="text/javascript"></script>
 <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js"></script>
 	
