@@ -35,3 +35,43 @@ a:hover #icon1 {background-image: url('../images/Icons/work2.png');}
 a:hover #icon2 {background-image: url('../images/Icons/Skill2.png');}
 a:hover #icon3 {background-image: url('../images/Icons/goal2.png');}
 a:hover #icon4 {background-image: url('../images/Icons/aboutme2.png');}
+/* ---------- Narrow screens: two-row header that still fits in 100px ---------- */
+@media (max-width: 991px) {
+	.row.header { height: 100px !important; overflow: hidden; }
+	.row.header > .col-md-1,
+	.row.header > .col-md-11 {
+		float: none !important;
+		width: 100% !important;
+		padding: 0 !important;
+		text-align: center !important;
+	}
+	.row.header > .col-md-11 {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+	}
+	.row.header h1.website {
+		float: none !important;
+		height: 38px !important;
+		line-height: 38px !important;
+		margin: 2px 0 0 !important;
+		font-size: 30px !important;
+		text-align: center;
+	}
+	.row.header .col-md-11 a.nav-link {
+		float: none !important;
+		display: inline-block !important;
+		height: 58px !important;
+		line-height: 18px !important;
+		margin: 0 !important;
+		padding: 4px 12px 0 !important;
+		font-size: 15px !important;
+		vertical-align: top;
+	}
+	.row.header .icon { width: 30px; height: 30px; margin: 0 auto 2px; }
+	.row.header .link-text { margin-top: 0 !important; white-space: nowrap; }
+}
+@media (max-width: 420px) {
+	.row.header h1.website { font-size: 26px !important; }
+	.row.header .col-md-11 a.nav-link { padding: 4px 6px 0 !important; font-size: 13px !important; }
+}

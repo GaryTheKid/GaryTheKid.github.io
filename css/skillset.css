@@ -21,3 +21,169 @@
 #title-skill{
 	background-image: url('../images/TitleBanner-skill.png');
 }
+/* ---------- HTML skill set (replaces SkillSet.png) ---------- */
+.sk-legend {
+	clear: both;
+	text-align: center;
+	font-size: 18px;
+	color: #555;
+	margin: 0 0 14px;
+}
+.sk-legend span { margin: 0 12px; white-space: nowrap; }
+.sk-legend b { color: #C8102E; }
+.sk-wrap {
+	width: 100%;
+	box-sizing: border-box;
+	clear: both;
+	max-width: 1500px;
+	margin: 0 auto 20px;
+}
+.sk-grid {
+	display: grid;
+	grid-template-columns: 44px repeat(6, minmax(0, 1fr));
+	gap: 22px 18px;
+	align-items: start;
+}
+.sk-seg {
+	grid-column: 1;
+	justify-self: center;
+	align-self: stretch;
+	position: relative;
+	width: 14px;
+	margin: 34px 0 -56px;
+	border: 3px solid #2e2e2e;
+	border-bottom: 0;
+}
+.sk-seg0 { background: #7a0d1d; }
+.sk-seg1 { background: #d11a2a; }
+.sk-seg2 { background: #f4a0a8; margin-bottom: 0; border-bottom: 3px solid #2e2e2e; }
+.sk-seg span {
+	position: absolute;
+	top: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: "LCALLIG";
+	font-size: 26px;
+	line-height: 30px;
+	color: #e3123a;
+	background: #FFFFF0;
+	padding: 0 2px;
+}
+.sk-box {
+	position: relative;
+	background: #ededed;
+	border: 4px solid #2e2e2e;
+	box-shadow: 6px 6px 0 #a7a7a7;
+	padding: 46px 14px 12px;
+	margin-top: 34px;
+	font-size: 17px;
+	line-height: 23px;
+	color: #222;
+}
+.sk-icon {
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 76px;
+	width: auto;
+	image-rendering: pixelated;
+}
+.sk-title {
+	font-family: "LCALLIG";
+	font-size: 19px;
+	line-height: 23px;
+	text-align: center;
+	overflow-wrap: anywhere;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+.sk-badge { display: none; }
+.sk-hl {
+	text-align: center;
+	color: #e3123a;
+	font-family: "LCALLIG";
+	font-size: 19px;
+	margin-bottom: 4px;
+}
+.sk-box ul { margin: 0; padding-left: 18px; }
+.sk-box li { margin: 2px 0; }
+.sk-c { border-top-color: #1E4FE0; }
+.sk-i { border-top-color: #2BB94A; }
+.sk-h { border-top-color: #F2960C; }
+.sk-research {
+	background: #fff;
+	border-width: 4px;
+	border-top: 8px solid #2e2e2e;
+	padding: 18px 18px 12px 120px;
+	margin-top: 10px;
+}
+.sk-research .sk-icon { top: 50%; left: 18px; transform: translateY(-50%); height: 84px; }
+.sk-research .sk-title { text-align: left; font-size: 24px; }
+.sk-research ul { columns: 2; column-gap: 34px; }
+.sk-two ul { columns: 2; column-gap: 24px; }
+.sk-box li { break-inside: avoid; }
+.sk-axis {
+	margin-top: 4px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 6px;
+	border: 4px solid #2e2e2e;
+	background: #2e2e2e;
+}
+.sk-axis span {
+	text-align: center;
+	font-family: "LCALLIG";
+	font-size: 30px;
+	line-height: 44px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.ax-c { background: #1E4FE0; }
+.ax-i { background: #5CF27A; }
+.ax-h { background: #F59A0C; }
+
+
+@media (min-width: 992px) and (max-width: 1299px) {
+	.sk-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: row dense; }
+	.sk-seg { display: none; }
+	.sk-research { grid-column: 1 / -1 !important; grid-row: 1 !important; }
+	.sk-c { grid-column: 1 !important; grid-row: auto !important; }
+	.sk-i { grid-column: 2 !important; grid-row: auto !important; }
+	.sk-h { grid-column: 3 !important; grid-row: auto !important; }
+	.sk-two ul { columns: 1; }
+	.sk-axis { grid-column: 1 / -1 !important; grid-row: auto !important; order: 99; }
+	.sk-badge {
+		display: inline-block; margin-left: 8px; padding: 0 6px;
+		background: #e3123a; color: #fff; font-size: 15px; vertical-align: 2px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sk-wrap { padding: 0; }
+	.sk-seg, .sk-axis, .sk-legend { display: none; }
+	.sk-grid { grid-template-columns: 1fr; background: none; gap: 12px; }
+	.sk-box { grid-column: 1 / -1 !important; grid-row: auto !important; }
+	.sk-research { padding: 54px 14px 12px; margin-top: 34px; }
+	.sk-research .sk-icon { top: -40px; left: 50%; transform: translateX(-50%); height: 76px; }
+	.sk-research .sk-title { text-align: center; }
+	.sk-research ul, .sk-two ul { columns: 1; }
+	.sk-badge {
+		display: inline-block;
+		margin-left: 8px;
+		padding: 0 6px;
+		background: #e3123a;
+		color: #fff;
+		font-size: 15px;
+		vertical-align: 2px;
+	}
+	.sk-c::before, .sk-i::before, .sk-h::before {
+		position: absolute; top: 6px; left: 8px;
+		font-size: 13px; color: #777; text-transform: uppercase; letter-spacing: 1px;
+	}
+	.sk-c::before { content: "Computer"; }
+	.sk-i::before { content: "Interaction"; }
+	.sk-h::before { content: "Human"; }
+}
